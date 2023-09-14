@@ -101,10 +101,9 @@ body {
     padding-top: 10px;
     opacity: .7;
 }
-.productsHeadDesWrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+
+.priceColor{
+    color: var(--primaryGold);
 }
 
 @media only screen and (min-width: 1000px) {
@@ -151,3 +150,4 @@ body {
         max-height: 200px;
     }
 }
+

@@ -89,6 +89,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.appendChild(productHeadline);
         productHeadline.appendChild(productPrice);
         productHeadDesWrapper.appendChild(productDescription);
+        productPrice.classList.add("priceColor");
         productHeadline.classList.add("text__headline");
         productImage.classList.add("left__image");
         productDescription.classList.add("text__description")
