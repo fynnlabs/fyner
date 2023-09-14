@@ -82,6 +82,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadline.textContent = `${product.name}`
         productPrice.textContent = `$${product.price}`
         productImage.src = product.imgUrl;
+        productImage.loading = "lazy";
         productDescription.textContent = `${product.description}`
         productListDiv.appendChild(productWrapper);
         productWrapper.appendChild(productImage);
