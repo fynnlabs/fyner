@@ -1,13 +1,12 @@
-/*
-* use innerHTML to insert the values
-* */
-
 //variables
 const allBtn = document.getElementById('allBtn');
 const breakfastBtn = document.getElementById('breakfastBtn');
 const lunchBtn = document.getElementById('lunchBtn');
 const shakesBtn = document.getElementById('shakesBtn');
 const dinnerBtn = document.getElementById('dinnerBtn');
+const hamburgerMenu = document.getElementById('hamburgerMenu')
+const linkList = document.getElementById('linkList')
+const navigation = document.getElementById('navigation')
 
 //the info for the products that should get rendered on the Website
 const products = [
@@ -50,6 +49,7 @@ breakfastBtn.addEventListener("click", function () {handleBtnClick("breakfast")}
 lunchBtn.addEventListener("click", function () {handleBtnClick("lunch")});
 shakesBtn.addEventListener("click", function () {handleBtnClick("shakes")});
 dinnerBtn.addEventListener("click", function () {handleBtnClick("dinner")});
+hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
 
 //the initial render of the website with all products on it
 renderFilteredProducts(products);
@@ -69,7 +69,6 @@ function handleBtnClick(category){
 
 //the function that renders after the filtered category
 function renderFilteredProducts(filteredProducts) {
-    console.log(filteredProducts)
     const productListDiv = document.getElementById('products');
     productListDiv.innerHTML = ''; // Clear the existing content
     filteredProducts.forEach(product => {
@@ -79,11 +78,11 @@ function renderFilteredProducts(filteredProducts) {
         const productPrice = document.createElement('div')
         const productDescription = document.createElement('div')
         const productImage =document.createElement('img')
-        productHeadline.textContent = `${product.name}`
+        productHeadline.textContent = product.name
         productPrice.textContent = `$${product.price}`
         productImage.src = product.imgUrl;
         productImage.loading = "lazy";
-        productDescription.textContent = `${product.description}`
+        productDescription.textContent = product.description
         productListDiv.appendChild(productWrapper);
         productWrapper.appendChild(productImage);
         productWrapper.appendChild(productHeadDesWrapper)
@@ -95,6 +94,10 @@ function renderFilteredProducts(filteredProducts) {
         productImage.classList.add("left__image");
         productDescription.classList.add("text__description")
         productWrapper.classList.add("products__wrapper")
+        productHeadDesWrapper.classList.add("headDesWrapper")
     });
 }
 
+function toggleNavigation() {
+    linkList.classList.toggle('show')
+}
