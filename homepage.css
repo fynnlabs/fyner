@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+
+:root{
+    --primaryBlue: #f1f5f8;
+    --primaryGold: #c7a46c;
+    --neutralBrown: #77603e;
+    --neutralWhite: #ffffff;
+    --neutralBlue: #c3d0da;
+    --navigation-background: #040516;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--primaryBlue);
+    height: 100%;
+    width: 100vw;
+}
+
+.navigation{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px 8px 32px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: var(--primaryBlue);
+;
+}
+
+.navigation__logo{
+    background-color: var(--primaryGold);
+    color: var(--primaryBlue);
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none   ;
+}
+
+.link__list{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding-top: 8px;
+    list-style: none;
+}
+
+.link__tag{
+    color: var(--primaryGold);
+    text-decoration: none;
+}
+
+.link__tag:hover{
+    cursor: pointer;
+    border-bottom: 2px dotted var(--primaryGold);
+    padding-bottom: 2px;
+    opacity: 0.7;
+}
+
+.eyecatcher{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid var(--primaryGold);
+    border-radius: 8px;
+}
+
+
+.catchy__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.cta__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 8px;
+    border: 1px solid var(--primaryGold);
+    border-radius: 50px;
+    width: fit-content;
+    font-size: 30px;
+    background-color: var(--primaryGold);
+    color: var(--neutralWhite);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 640px){
+    .link__list{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: var(--navigation-background);
+    }
+
+    .hamburger-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 4px 0;
+    }
+
+    .bar{
+        width: 30px;
+        height: 4px;
+        background: var(--primaryGold);
+        opacity: 0.7;
+    }
+
+    .show {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+}

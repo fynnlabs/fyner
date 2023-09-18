@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>How to create a restaurant menu page</title>
-    </head>
-    <body>
-    <nav class="navigation">
-        <div class="navigation__logo">Fyner</div>
-        <div class="navigation__links">
-            <div class="hamburger-menu" id="hamburgerMenu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="link__list" id="linkList">
-                <li class="link"><a class="link__tag" href="#">Our Menu</a></li>
-                <li class="link"><a class="link__tag" href="#">Pick-Up Order</a></li>
-                <li class="link"><a class="link__tag" href="#">About us</a></li>
-            </ul>
-        </div>    
-    </nav>
-    
-    <div class="header__wrapper">
-        <header class="header">Our Menu</header>
-        <div class="underline"></div>
-        <section class="mainBtn">
-            <div class="allBtn" id="allBtn">All</div>
-            <div class="allBtn" id="breakfastBtn">Breakfast</div>
-            <div class="allBtn" id="lunchBtn">Lunch</div>
-            <div class="allBtn" id="shakesBtn">Shakes</div>
-            <div class="allBtn" id="dinnerBtn">Dinner</div>
-        </section>
-    </div>
-    <div class="products__wrapper">
 
-    <section>
-        <div class="products" id="products">
+<head>
+    <link rel="stylesheet" href="homepage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Fyner Homepage</title>
+</head>
+
+<body>
+
+<nav class="navigation">
+    <a class="navigation__logo" href="index.html">Fyner</a>
+    <div class="navigation__links">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-    </section>
+        <ul class="link__list" id="linkList">
+            <li class="link"><a class="link__tag" href="menu.html">Our Menu</a></li>
+            <li class="link"><a class="link__tag" href="#">Pick-Up Order</a></li>
+            <li class="link"><a class="link__tag" href="#">About us</a></li>
+        </ul>
     </div>
+</nav>
 
-    </body>
-    <script src="./script.js"></script>
+<img src="./assets/images/restaurant.png" class="eyecatcher" alt="">
+
+<div class="cta__btn">Order Now</div>
+
+<div class="catchy__text">
+    Welcome to the Fyner, the best Diner!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.
+</div>
+</body>
+<script src="scriptHomepage.js"></script>
 </html>

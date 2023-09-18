@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+
 :root{
     --primaryBlue: #f1f5f8;
     --primaryGold: #c7a46c;
@@ -11,6 +13,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -37,6 +40,7 @@ body {
     color: var(--primaryBlue);
     padding: 8px;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .link__list{
@@ -82,7 +86,7 @@ body {
     opacity: 0.7;
 }
 
-.header__wrapper .mainBtn {
+.header__wrapper .main__btn {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -95,11 +99,11 @@ body {
     align-items: center;
     height: 48px;
     width: 100%;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 40px;
 }
 
-.header__wrapper .mainBtn .allBtn{
+.header__wrapper .main__btn .all__btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +115,7 @@ body {
     box-shadow: -1px -1px 4px var(--primaryGold), 1px 1px 4px var(--neutralBrown);
 }
 
-.header__wrapper .mainBtn .allBtn:hover {
+.header__wrapper .main__btn .all__btn:hover {
     color: var(--neutralWhite);
     background-color: var(--primaryGold);
     cursor: pointer;
@@ -151,7 +155,7 @@ body {
     opacity: .7;
 }
 
-.priceColor{
+.price__color{
     color: var(--primaryGold);
 }
 

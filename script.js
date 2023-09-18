@@ -6,7 +6,6 @@ const shakesBtn = document.getElementById('shakesBtn');
 const dinnerBtn = document.getElementById('dinnerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
-const navigation = document.getElementById('navigation')
 
 //the info for the products that should get rendered on the Website
 const products = [
@@ -51,6 +50,7 @@ shakesBtn.addEventListener("click", function () {handleBtnClick("shakes")});
 dinnerBtn.addEventListener("click", function () {handleBtnClick("dinner")});
 hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
 
+
 //the initial render of the website with all products on it
 renderFilteredProducts(products);
 
@@ -89,7 +89,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.appendChild(productHeadline);
         productHeadline.appendChild(productPrice);
         productHeadDesWrapper.appendChild(productDescription);
-        productPrice.classList.add("priceColor");
+        productPrice.classList.add("price__color");
         productHeadline.classList.add("text__headline");
         productImage.classList.add("left__image");
         productDescription.classList.add("text__description")
@@ -101,3 +101,4 @@ function renderFilteredProducts(filteredProducts) {
 function toggleNavigation() {
     linkList.classList.toggle('show')
 }
+
