@@ -38,7 +38,7 @@ body {
 ;
 }
 
-.navigation__logo{
+.navigation .navigation__logo{
     background-color: var(--primaryGold);
     color: var(--neutralWhite);
     padding: 8px;
@@ -222,7 +222,7 @@ body {
 
     .header__wrapper{
         width: 60%;
-        padding-top: 64px;
+        padding-top: 80px;
     }
 
     .header__wrapper .header{
@@ -249,6 +249,7 @@ body {
         display: flex;
         flex-direction: row;
         width: 49%;
+        padding-bottom: 48px;
     }
 
     .left__image{

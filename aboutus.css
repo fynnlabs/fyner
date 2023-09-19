@@ -99,11 +99,29 @@ body {
 }
 
 .text__restaurant, .text__food{
+    text-align: center;
     padding-bottom: 24px;
     letter-spacing: 2px;
 }
 
 @media only screen and (min-width: 640px){
+    .restaurant__wrapper, .food__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image__restaurant, .image__food{
+        max-width: 50%;
+    }
+
+    .underline{
+        margin: 0 auto 56px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
     .navigation{
         width: 60%;
         font-size: 24px;
@@ -112,11 +130,9 @@ body {
 
     .header{
         font-size: 56px;
+        padding-top: 80px;
     }
 
-    .underline{
-        margin: 0 auto 48px;
-    }
     .aboutus__wrapper{
         padding: 0;
         width: 60%;
@@ -124,18 +140,24 @@ body {
 
     .restaurant__wrapper{
         display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         padding-bottom: 100px;
+
     }
 
     .food__wrapper{
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         padding-bottom: 16px;
     }
 
     .text__wrapper{
         display: flex;
         flex-direction: column;
+        flex: 1;
+        max-width: 50%;
         order: 1;
         padding: 0 32px;
     }
@@ -143,6 +165,8 @@ body {
     .image__restaurant{
         max-width: 350px;
         max-height: 250px;
+        flex: 1;
+        transform: scale(1.5);
     }
 
     .image__food{
@@ -150,6 +174,8 @@ body {
         max-height: 250px;
         order: 2;
         rotate: 3deg;
+        flex: 1;
+        transform: scale(1.5);
     }
     .header__restaurant, .header__food{
         padding-top: 0;

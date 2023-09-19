@@ -23,7 +23,7 @@ body {
 ;
 }
 
-.navigation__logo{
+.navigation .navigation__logo{
     background-color: var(--primaryGold);
     color: var(--neutralWhite);
     padding: 8px;
@@ -31,7 +31,7 @@ body {
     text-decoration: none   ;
 }
 
-.link__list{
+.navigation .navigation__links .link__list{
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -39,12 +39,12 @@ body {
     list-style: none;
 }
 
-.link__tag{
+.navigation .navigation__links .link__list .link__tag{
     color: var(--primaryGold);
     text-decoration: none;
 }
 
-.link__tag:hover{
+.navigation .navigation__links .link__list .link__tag:hover{
     cursor: pointer;
     border-bottom: 2px dotted var(--primaryGold);
     padding-bottom: 2px;
@@ -55,31 +55,21 @@ body {
     padding: 32px;
 }
 
-.image__background{
+.content .image__background{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     height: 70vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url("assets/images/restaurant.png");
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+    linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
+    url("assets/images/restaurant.png");
     background-size: cover;
     color: var(--primaryGold);
     font-size: 56px;
 }
 
-
-.catchy__text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: normal;
-    letter-spacing: 2px;
-    padding-top: 16px;
-    color: var(--neutralWhite);
-    line-height: 24px;
-}
-
-.cta__btn{
+.content .image__background .cta__btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,19 +86,58 @@ body {
     text-transform: uppercase;
 }
 
+.content .catchy__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 16px;
+    color: var(--neutralWhite);
+    line-height: 24px;
+}
+
 @media only screen and (min-width: 640px){
+    .navigation{
+        background: transparent;
+    }
+
     .content{
         padding: 0;
-        display: flex;
-        flex-direction: column;
     }
+
+    .content .image__background{
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+        linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
+        url("assets/images/restaurant.png");
+    }
+
+    .content .catchy__text{
+        padding: 0 32px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1000px){
     .navigation{
         width: 60%;
         background: transparent;
         padding: 16px 0 8px;
         font-size: 24px;
     }
-    .image__background{
+
+    .content {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .image__background{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -117,36 +146,27 @@ body {
         url("assets/images/restaurant.png");
 
     }
-    .catchy__text{
-        text-align: center;
+        .content .image__background .cta__btn{
+            font-size: 32px;
+            padding: 10px 24px;
+        }
+
+    .content .catchy__text{
         width: 45%;
         margin: 0 auto;
         font-size: 24px;
         padding-top: 0;
         line-height: 32px;
     }
-
-    .cta__btn{
-        font-size: 32px;
-        padding: 10px 24px;
-    }
 }
 
 
 @media only screen and (max-width: 640px){
-    .content{
-        padding: 0;
-    }
-
     .navigation{
         background: transparent;
     }
 
-    .catchy__text{
-        padding: 0 32px;
-    }
-
-    .link__list{
+    .navigation .navigation__links .link__list{
         display: none;
         flex-direction: column;
         position: absolute;
@@ -156,7 +176,15 @@ body {
         background: var(--primaryBlue);
     }
 
-    .hamburger-menu{
+    .content{
+        padding: 0;
+    }
+
+    .content .catchy__text{
+        padding: 0 32px;
+    }
+
+    .hamburger__menu{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
