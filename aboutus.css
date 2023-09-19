@@ -1,9 +1,13 @@
 @import url("menu.css");
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--primaryBlue);
     height: 100%;
     width: 100vw;
+    color: var(--neutralWhite);
 }
 
 .navigation{
@@ -21,7 +25,7 @@ body {
 
 .navigation__logo{
     background-color: var(--primaryGold);
-    color: var(--primaryBlue);
+    color: var(--neutralWhite);
     padding: 8px;
     border-radius: 8px;
     text-decoration: none;
@@ -49,6 +53,7 @@ body {
     border-bottom: 2px dotted var(--primaryGold);
     padding-bottom: 2px;
 }
+
 .link__order:hover, .link__about:hover,.link__menu:hover{
     cursor: pointer;
     border-bottom: 2px dotted var(--primaryGold);
@@ -56,7 +61,108 @@ body {
     opacity: 0.7;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 0 0;
+    color: var(--neutralWhite);
+    font-size: 40px;
+    font-weight: 700;
+}
 
+.underline{
+    border: 2px solid var(--primaryGold);
+    width: 64px;
+    margin: 0 auto 32px;
+    opacity: 0.7;
+}
+
+.aboutus__wrapper{
+    padding: 0 32px;
+}
+.image__restaurant, .image__food{
+    height: 200px;
+    width: 100%;
+    rotate: -3deg;
+}
+
+.header__restaurant, .header__food{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--primaryGold);
+    letter-spacing: 2px;
+}
+
+.text__restaurant, .text__food{
+    padding-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 640px){
+    .navigation{
+        width: 60%;
+        font-size: 24px;
+        padding: 16px 0 0;
+    }
+
+    .header{
+        font-size: 56px;
+    }
+
+    .underline{
+        margin: 0 auto 48px;
+    }
+    .aboutus__wrapper{
+        padding: 0;
+        width: 60%;
+    }
+
+    .restaurant__wrapper{
+        display: flex;
+        padding-bottom: 100px;
+    }
+
+    .food__wrapper{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 16px;
+    }
+
+    .text__wrapper{
+        display: flex;
+        flex-direction: column;
+        order: 1;
+        padding: 0 32px;
+    }
+
+    .image__restaurant{
+        max-width: 350px;
+        max-height: 250px;
+    }
+
+    .image__food{
+        max-width: 350px;
+        max-height: 250px;
+        order: 2;
+        rotate: 3deg;
+    }
+    .header__restaurant, .header__food{
+        padding-top: 0;
+        font-size: 32px;
+    }
+
+    .text__restaurant, .text__food{
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 28px;
+    }
+}
 @media only screen and (max-width: 640px){
     .link__list{
         display: none;

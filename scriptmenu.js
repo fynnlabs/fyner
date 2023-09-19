@@ -93,7 +93,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadline.classList.add("text__headline");
         productImage.classList.add("left__image");
         productDescription.classList.add("text__description")
-        productWrapper.classList.add("products__wrapper")
+        productWrapper.classList.add("imagetext__wrapper")
         productHeadDesWrapper.classList.add("headDesWrapper")
     });
 }
