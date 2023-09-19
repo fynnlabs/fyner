@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 32px 8px 32px;
+    padding: 16px 16px 8px;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -93,7 +93,7 @@ body {
     font-weight: normal;
     letter-spacing: 2px;
     text-align: center;
-    padding-top: 16px;
+    padding: 16px 16px 0;
     color: var(--neutralWhite);
     line-height: 24px;
 }
@@ -101,6 +101,7 @@ body {
 @media only screen and (min-width: 640px){
     .navigation{
         background: transparent;
+        padding: 16px 44px 0;
     }
 
     .content{
@@ -114,7 +115,7 @@ body {
     }
 
     .content .catchy__text{
-        padding: 0 32px;
+        padding: 0 44px;
     }
 }
 

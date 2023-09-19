@@ -98,6 +98,7 @@ function renderFilteredProducts(filteredProducts) {
     });
 }
 
+//toggles the hamburger menu
 function toggleNavigation() {
     linkList.classList.toggle('show')
 }
