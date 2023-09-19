@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
 
 :root{
-    --primaryBlue: #f1f5f8;
     --primaryGold: #c7a46c;
     --neutralBrown: #77603e;
-    --neutralWhite: #ffffff;
+    --neutralWhite: #e6e6e6;
     --neutralBlue: #c3d0da;
-    --navigation-background: #040516;
+    --primaryBlue: #040516;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
 
 body {
@@ -51,12 +50,18 @@ body {
     list-style: none;
 }
 
-.link__tag{
+.link__order, .link__about{
     color: var(--primaryGold);
     text-decoration: none;
 }
 
-.link__tag:hover{
+.link__menu{
+    color: var(--primaryGold);
+    text-decoration: none;
+    border-bottom: 2px dotted var(--primaryGold);
+    padding-bottom: 2px;
+}
+.link__order:hover, .link__about:hover,.link__menu:hover{
     cursor: pointer;
     border-bottom: 2px dotted var(--primaryGold);
     padding-bottom: 2px;
@@ -101,6 +106,7 @@ body {
     width: 100%;
     font-weight: 900;
     font-size: 40px;
+    color: var(--neutralWhite);
 }
 
 .header__wrapper .main__btn .all__btn{
@@ -143,16 +149,18 @@ body {
 .text__headline{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dotted var(--neutralBlue);
+    border-bottom: 1px dotted var(--neutralWhite);
     font-weight: 700;
     letter-spacing: 1.5px;
     padding-top: 10px;
+    color: var(--neutralWhite);
 
 }
 
 .text__description{
     padding-top: 10px;
     opacity: .7;
+    color: var(--neutralWhite);
 }
 
 .price__color{
@@ -185,12 +193,9 @@ body {
         max-height: 220px;
         min-height: 220px;
     }
-
 }
 
 @media only screen and (min-width: 1000px) {
-
-
     .header__wrapper .mainBtn{
         display: flex;
         flex-direction: row;
@@ -221,7 +226,7 @@ body {
         left: 0;
         height: 100vh;
         width: 100vw;
-        background: var(--navigation-background);
+        background: var(--primaryBlue);
     }
 
     .hamburger-menu{
