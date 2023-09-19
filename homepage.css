@@ -1,20 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap');
+@import url("menu.css");
 
-:root{
-    --primaryBlue: #f1f5f8;
-    --primaryGold: #c7a46c;
-    --neutralBrown: #77603e;
-    --neutralWhite: #ffffff;
-    --neutralBlue: #c3d0da;
-    --navigation-background: #040516;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
     background-color: var(--primaryBlue);
@@ -37,7 +22,7 @@ body {
 
 .navigation__logo{
     background-color: var(--primaryGold);
-    color: var(--primaryBlue);
+    color: var(--neutralWhite);
     padding: 8px;
     border-radius: 8px;
     text-decoration: none   ;
@@ -63,15 +48,20 @@ body {
     opacity: 0.7;
 }
 
-.eyecatcher{
+.content{
+    padding: 32px;
+}
+
+.image__background{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    height: 300px;
+    align-items: flex-end;
+    height: 70vh;
     width: 100%;
-    object-fit: cover;
-    border: 2px solid var(--primaryGold);
-    border-radius: 8px;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url("./assets/images/restaurant.png");
+    background-size: cover;
+    color: var(--primaryGold);
+    font-size: 56px;
 }
 
 
@@ -81,6 +71,9 @@ body {
     align-items: center;
     font-weight: 900;
     letter-spacing: 2px;
+    padding-top: 16px;
+    color: var(--neutralWhite);
+    line-height: 24px;
 }
 
 .cta__btn{
@@ -88,20 +81,45 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px auto;
-    padding: 8px;
-    border: 1px solid var(--primaryGold);
+    padding: 20px 48px;
     border-radius: 50px;
     width: fit-content;
-    font-size: 30px;
+    font-size: 24px;
     background-color: var(--primaryGold);
     color: var(--neutralWhite);
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
+@media only screen and (min-width: 640px){
+    .content{
+        padding: 0;
+    }
+    .navigation{
+        width: 60%;
+        margin: 0 20%;
+        background: transparent;
+        padding: 16px 0 8px;
+    }
+    .image__background{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+        linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
+        url("./assets/images/restaurant.png");
 
-
-
-
-
+    }
+    .catchy__text{
+        width: 60%;
+        margin: 0 20%;
+    }
+    .cta__btn{
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+}
 
 
 
@@ -129,7 +147,7 @@ body {
         left: 0;
         height: 100vh;
         width: 100vw;
-        background: var(--navigation-background);
+        background: var(--primaryBlue);
     }
 
     .hamburger-menu{
