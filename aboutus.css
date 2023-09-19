@@ -172,15 +172,13 @@ body {
     }
 
     .image__restaurant{
-        max-width: 350px;
-        max-height: 250px;
+        max-width: 30%;
         flex: 1;
         transform: scale(1.5);
     }
 
     .image__food{
-        max-width: 350px;
-        max-height: 250px;
+        max-width: 30%;
         order: 2;
         rotate: 3deg;
         flex: 1;

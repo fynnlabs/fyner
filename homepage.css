@@ -86,6 +86,10 @@ body {
     text-transform: uppercase;
 }
 
+.content .image__background .cta__btn:hover{
+    box-shadow: -1px -1px 4px var(--primaryGold), 1px 1px 4px var(--neutralBrown);
+    cursor: pointer;
+}
 .content .catchy__text{
     display: flex;
     justify-content: center;
