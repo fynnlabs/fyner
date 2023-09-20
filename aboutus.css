@@ -43,7 +43,11 @@ body {
 }
 
 .aboutus__wrapper{
-    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .image__restaurant, .image__food{
@@ -72,10 +76,6 @@ body {
 @media only screen and (min-width: 640px){
     .navigation{
         padding: 16px 44px 0;
-    }
-
-    .aboutus__wrapper{
-        padding: 0 44px;
     }
 
     .restaurant__wrapper, .food__wrapper{
