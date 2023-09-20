@@ -1,14 +1,4 @@
-@import url("../menu.css");
-
-
-body {
-    display: flex;
-    justify-content: center;
-    background-color: var(--primaryBlue);
-    height: 100%;
-    width: 100vw;
-
-}
+@import url("/pages/menu/menu.css");
 
 .navigation{
     background: transparent;
@@ -30,7 +20,7 @@ body {
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
     linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-    url("../assets/images/restaurant.png");
+    url("../../assets/images/restaurant.png");
     background-size: cover;
     color: var(--primaryGold);
     font-size: 56px;
@@ -78,12 +68,6 @@ body {
         padding: 0;
     }
 
-    .content .image__background{
-        background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
-        linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-        url("../assets/images/restaurant.png");
-    }
-
     .content .catchy__text{
         padding: 0 44px;
     }
@@ -106,10 +90,6 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
-        linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-        url("../assets/images/restaurant.png");
-
     }
         .content .image__background .cta__btn{
             font-size: 32px;

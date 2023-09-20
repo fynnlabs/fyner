@@ -15,7 +15,7 @@ const products = [
         price: 15.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'breakfast',
-        imgUrl: '../assets/images/pancakes.png'
+        imgUrl: '/assets/images/pancakes.png'
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const products = [
         price: 13.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'lunch',
-        imgUrl: '../assets/images/burger.png'
+        imgUrl: '/assets/images/burger.png'
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const products = [
         price: 6.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'shakes',
-        imgUrl: '../assets/images/shake.png'
+        imgUrl: '/assets/images/shake.png'
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const products = [
         price: 20.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'dinner',
-        imgUrl: '../assets/images/dinner.png'
+        imgUrl: '/assets/images/dinner.png'
     }
 ];
 
