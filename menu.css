@@ -28,7 +28,6 @@ body {
 .nav__wrapper {
     display: flex;
     justify-content: center;;
-
     background-color: var(--primaryBlue);
     width: 100%;
 }
@@ -38,6 +37,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
+    background-color: var(--primaryBlue);
     top: 0;
     z-index: 2;
     padding: 16px 16px 0 16px;
