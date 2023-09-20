@@ -1,4 +1,4 @@
-@import url("menu.css");
+@import url("../menu.css");
 
 
 body {
@@ -10,47 +10,14 @@ body {
 
 }
 
-.navigation{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px 16px 8px;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    background-color: var(--primaryBlue);
-;
+.nav__wrapper{
+    background: transparent;
 }
 
-.navigation .navigation__logo{
-    background-color: var(--primaryGold);
-    color: var(--neutralWhite);
-    padding: 8px;
-    border-radius: 8px;
-    text-decoration: none   ;
+.link__menu{
+    border-bottom: none;
+    padding-bottom: 0;
 }
-
-.navigation .navigation__links .link__list{
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    padding-top: 8px;
-    list-style: none;
-}
-
-.navigation .navigation__links .link__list .link__tag{
-    color: var(--primaryGold);
-    text-decoration: none;
-}
-
-.navigation .navigation__links .link__list .link__tag:hover{
-    cursor: pointer;
-    border-bottom: 2px dotted var(--primaryGold);
-    padding-bottom: 2px;
-    opacity: 0.7;
-}
-
 .content{
     padding: 32px;
 }
@@ -63,7 +30,7 @@ body {
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
     linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-    url("assets/images/restaurant.png");
+    url("../assets/images/restaurant.png");
     background-size: cover;
     color: var(--primaryGold);
     font-size: 56px;
@@ -104,7 +71,6 @@ body {
 
 @media only screen and (min-width: 640px){
     .navigation{
-        background: transparent;
         padding: 16px 44px 0;
     }
 
@@ -115,7 +81,7 @@ body {
     .content .image__background{
         background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
         linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-        url("assets/images/restaurant.png");
+        url("../assets/images/restaurant.png");
     }
 
     .content .catchy__text{
@@ -123,15 +89,9 @@ body {
     }
 }
 
-
-
-
-
-
 @media only screen and (min-width: 1000px){
     .navigation{
         width: 60%;
-        background: transparent;
         padding: 16px 0 8px;
         font-size: 24px;
     }
@@ -148,7 +108,7 @@ body {
         background-size: cover;
         background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
         linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
-        url("assets/images/restaurant.png");
+        url("../assets/images/restaurant.png");
 
     }
         .content .image__background .cta__btn{
@@ -165,12 +125,7 @@ body {
     }
 }
 
-
 @media only screen and (max-width: 640px){
-    .navigation{
-        background: transparent;
-    }
-
     .navigation .navigation__links .link__list{
         display: none;
         flex-direction: column;

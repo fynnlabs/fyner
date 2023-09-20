@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="pages/homepage.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Fyner Homepage</title>
 </head>
 
 <body>
+<div class="content__wrapper">
+    <div class="nav__wrapper">
 <nav class="navigation">
     <a class="navigation__logo" href="index.html">Fyner</a>
     <div class="navigation__links">
@@ -18,12 +20,13 @@
             <div class="bar"></div>
         </div>
         <ul class="link__list" id="linkList">
-            <li class="link"><a class="link__tag" href="pages/menu.html">Our Menu</a></li>
-            <li class="link"><a class="link__tag" href="#">Pick-Up Order</a></li>
-            <li class="link"><a class="link__tag" href="pages/aboutus.html">About us</a></li>
+            <li class="link"><a class="link__menu" href="pages/menu.html">Our Menu</a></li>
+            <li class="link"><a class="link__order" href="#">Pick-Up Order</a></li>
+            <li class="link"><a class="link__about" href="pages/aboutus.html">About us</a></li>
         </ul>
     </div>
 </nav>
+    </div>
 
 <div class="content">
 <div class="image__background">
@@ -35,7 +38,17 @@
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 </div>
 </div>
-
+</div>
+<section class="footer__wrapper">
+    <div class="footer">
+        <a class="link__restaurant" href="#">Fyner - Hamburger Allee 23, 30161 Hannover</a>
+        <div class="infos">
+            <a class="link__info" href="#">Impressum</a>
+            <a class="link__info" href="#">Datenschutz</a>
+            <a class="link__info" href="#">Kontakt</a>
+        </div>
+    </div>
+</section>
 </body>
 <script src="scripthomepage.js"></script>
 </html>
