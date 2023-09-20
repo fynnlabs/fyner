@@ -1,6 +1,6 @@
 @import url("/pages/menu/menu.css");
 
-.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link__order, .link__menu{
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__order, .link__menu{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: none;
@@ -8,7 +8,7 @@
 }
 
 
-.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link__about{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__about{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: 2px dotted var(--primaryGold);
@@ -41,13 +41,13 @@
     padding: 0 32px;
 }
 
-.image__restaurant, .image__food{
+:is(.content__wrapper .aboutus__wrapper .restaurant__wrapper) .image__restaurant, .image__food{
     height: 200px;
     width: 100%;
     rotate: -3deg;
 }
 
-.header__restaurant, .header__food{
+:is(.content__wrapper .aboutus__wrapper .restaurant__wrapper .text__wrapper) .header__restaurant, .header__food{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@
     letter-spacing: 2px;
 }
 
-.text__restaurant, .text__food{
+:is(.content__wrapper .aboutus__wrapper .restaurant__wrapper .text__wrapper) .text__restaurant, .text__food{
     text-align: center;
     padding-bottom: 24px;
     letter-spacing: 2px;
@@ -66,18 +66,18 @@
 }
 
 @media only screen and (min-width: 640px){
-    .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         padding: 16px 44px 0;
     }
 
-    .restaurant__wrapper, .food__wrapper{
+    :is(.content__wrapper .aboutus__wrapper) .restaurant__wrapper, .food__wrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .image__restaurant, .image__food{
+    :is(.content__wrapper .aboutus__wrapper .restaurant__wrapper) .image__restaurant, .image__food{
         max-width: 50%;
     }
 
@@ -103,7 +103,7 @@
         width: 60%;
     }
 
-    .restaurant__wrapper{
+    :is(.content__wrapper .aboutus__wrapper) .restaurant__wrapper{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -111,7 +111,7 @@
 
     }
 
-    .food__wrapper{
+    :is(.content__wrapper .aboutus__wrapper) .food__wrapper{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -127,25 +127,26 @@
         padding: 0 32px;
     }
 
-    .image__restaurant{
+    .content__wrapper .aboutus__wrapper .restaurant__wrapper .image__restaurant{
         max-width: 30%;
         flex: 1;
         transform: scale(1.5);
     }
 
-    .image__food{
+    .content__wrapper .aboutus__wrapper .food__wrapper .image__food{
         max-width: 30%;
         order: 2;
         rotate: 3deg;
         flex: 1;
         transform: scale(1.5);
     }
-    .header__restaurant, .header__food{
+
+    :is(.content__wrapper .aboutus__wrapper .restaurant__wrapper .text__wrapper) .header__restaurant, .header__food{
         padding-top: 0;
         font-size: 32px;
     }
 
-    .text__restaurant, .text__food{
+    :is(.content__wrapper .aboutus__wrapper .restaurant__wrapper .text__wrapper) .text__restaurant, .text__food{
         font-size: 20px;
         font-weight: normal;
         text-align: center;
@@ -153,7 +154,7 @@
     }
 }
 @media only screen and (max-width: 640px){
-    .link__list{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list{
         display: none;
         flex-direction: column;
         position: absolute;
@@ -163,7 +164,7 @@
         background: var(--primaryBlue);
     }
 
-    .hamburger-menu{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -171,7 +172,7 @@
         padding: 4px 0;
     }
 
-    .bar{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar{
         width: 30px;
         height: 4px;
         background: var(--primaryGold);

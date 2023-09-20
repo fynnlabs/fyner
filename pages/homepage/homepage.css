@@ -1,18 +1,18 @@
 @import url("/pages/menu/menu.css");
 
-.navigation{
+.content__wrapper .nav__wrapper .navigation{
     background: transparent;
 }
 
-.link__menu{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__menu{
     border-bottom: none;
     padding-bottom: 0;
 }
-.content{
+.content__wrapper .content{
     padding: 32px;
 }
 
-.content .image__background{
+.content__wrapper .content .image__background{
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -26,7 +26,7 @@
     font-size: 56px;
 }
 
-.content .image__background .cta__btn{
+.content__wrapper .content .image__background .cta__btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,11 +43,11 @@
     text-transform: uppercase;
 }
 
-.content .image__background .cta__btn:hover{
+.content__wrapper .content .image__background .cta__btn:hover{
     box-shadow: -1px -1px 4px var(--primaryGold), 1px 1px 4px var(--neutralBrown);
     cursor: pointer;
 }
-.content .catchy__text{
+.content__wrapper .content .catchy__text{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,43 +60,44 @@
 }
 
 @media only screen and (min-width: 640px){
-    .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         padding: 16px 44px 0;
     }
 
-    .content{
+    .content__wrapper .content{
         padding: 0;
     }
 
-    .content .catchy__text{
+    .content__wrapper .content .catchy__text{
         padding: 0 44px;
     }
 }
 
 @media only screen and (min-width: 1000px){
-    .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         width: 60%;
         padding: 16px 0 8px;
         font-size: 24px;
     }
 
-    .content {
+    .content__wrapper .content {
         padding: 0;
         display: flex;
         flex-direction: column;
     }
 
-    .content .image__background{
+    .content__wrapper .content .image__background{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-        .content .image__background .cta__btn{
-            font-size: 32px;
-            padding: 10px 24px;
-        }
 
-    .content .catchy__text{
+    .content__wrapper .content .image__background .cta__btn{
+        font-size: 32px;
+        padding: 10px 24px;
+    }
+
+    .content__wrapper  .content .catchy__text{
         width: 45%;
         margin: 0 auto;
         font-size: 24px;
@@ -106,7 +107,7 @@
 }
 
 @media only screen and (max-width: 640px){
-    .navigation .navigation__links .link__list{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list{
         display: none;
         flex-direction: column;
         position: absolute;
@@ -116,15 +117,15 @@
         background: var(--primaryBlue);
     }
 
-    .content{
+    .content__wrapper .content{
         padding: 0;
     }
 
-    .content .catchy__text{
+    .content__wrapper .content .catchy__text{
         padding: 0 32px;
     }
 
-    .hamburger__menu{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -132,7 +133,7 @@
         padding: 4px 0;
     }
 
-    .bar{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar{
         width: 30px;
         height: 4px;
         background: var(--primaryGold);
