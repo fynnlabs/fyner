@@ -1,6 +1,6 @@
 @import url("/pages/menu/menu.css");
 
-.link__order, .link__menu{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link__order, .link__menu{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: none;
@@ -8,31 +8,31 @@
 }
 
 
-.link__about{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link__about{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: 2px dotted var(--primaryGold);
     padding-bottom: 2px;
 }
 
-.header {
+.content__wrapper .header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 0 0 0;
     color: var(--neutralWhite);
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
-.underline{
+.content__wrapper .underline{
     border: 2px solid var(--primaryGold);
     width: 64px;
     margin: 0 auto 32px;
     opacity: 0.7;
 }
 
-.aboutus__wrapper{
+.content__wrapper .aboutus__wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@
     align-items: center;
     padding: 16px 0;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--primaryGold);
     letter-spacing: 2px;
 }
@@ -93,12 +93,12 @@
         padding: 16px 0 0;
     }
 
-    .header{
+    .content__wrapper .header{
         font-size: 56px;
         padding-top: 80px;
     }
 
-    .aboutus__wrapper{
+    .content__wrapper .aboutus__wrapper{
         padding: 0;
         width: 60%;
     }
