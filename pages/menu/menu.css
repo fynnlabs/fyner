@@ -25,14 +25,14 @@ body {
     width: 100vw;
 }
 
-.nav__wrapper {
+.content__wrapper .nav__wrapper {
     display: flex;
     justify-content: center;;
     background-color: var(--primaryBlue);
     width: 100%;
 }
 
-.nav__wrapper .navigation{
+.content__wrapper .nav__wrapper .navigation{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -44,7 +44,7 @@ body {
     width: 100%;
 }
 
-.nav__wrapper .navigation .navigation__logo{
+.content__wrapper .nav__wrapper .navigation .navigation__logo{
     background-color: var(--primaryGold);
     color: var(--neutralWhite);
     padding: 8px;
@@ -52,7 +52,7 @@ body {
     text-decoration: none;
 }
 
-.nav__wrapper .navigation .navigation__links .link__list{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list{
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -60,26 +60,26 @@ body {
     list-style: none;
 }
 
-:is(.nav__wrapper .navigation .navigation__links .link__list) .link__order, .link__about{
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__order, .link__about{
     color: var(--primaryGold);
     text-decoration: none;
 }
 
-.nav__wrapper .navigation .navigation__links .link__list .link__menu{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__menu{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: 2px dotted var(--primaryGold);
     padding-bottom: 2px;
 }
 
-:is(.nav__wrapper .navigation .navigation__links .link__list) .link__order:hover, .link__about:hover,.link__menu:hover{
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__order:hover, .link__about:hover, .link__menu:hover{
     cursor: pointer;
-    border-bottom: 2px dotted var(--primaryGold);
-    padding-bottom: 2px;
+    border-bottom: 2px dotted var(--primaryGold) !important;
+    padding-bottom: 2px !important;
     opacity: 0.7;
 }
 
-.header__wrapper {
+.content__wrapper .header__wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -91,16 +91,17 @@ body {
     min-height: 110px;
     background-color: var(--primaryBlue);
     z-index: 1;
+    margin: 0 auto;
 }
 
-.header__wrapper .underline{
+.content__wrapper .header__wrapper .underline{
     border: 2px solid var(--primaryGold);
     width: 64px;
-    margin: 0 auto;
+    margin: 0 auto 16px;
     opacity: 0.7;
 }
 
-.header__wrapper .header {
+.content__wrapper .header__wrapper .header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,14 +112,14 @@ body {
     color: var(--neutralWhite);
 }
 
-.header__wrapper .main__btn {
+.content__wrapper .header__wrapper .main__btn {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 8px 16px;
 }
 
-.header__wrapper .main__btn .all__btn{
+.content__wrapper .header__wrapper .main__btn .all__btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +131,7 @@ body {
     box-shadow: -1px -1px 4px var(--primaryGold), 1px 1px 4px var(--neutralBrown);
 }
 
-.header__wrapper .main__btn .all__btn:hover {
+.content__wrapper .header__wrapper .main__btn .all__btn:hover {
     color: var(--neutralWhite);
     background-color: var(--primaryGold);
     cursor: pointer;
@@ -138,6 +139,7 @@ body {
 
 .products__wrapper {
     padding: 16px;
+    margin: 0 auto;
 }
 
 .imagetext__wrapper{
@@ -219,11 +221,11 @@ body {
 
 
 @media only screen and (min-width: 640px){
-    .nav__wrapper .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         padding: 16px 44px 0;
     }
 
-    .header__wrapper{
+    .content__wrapper .header__wrapper{
         padding: 80px 0;
     }
     .text__headline{
@@ -261,21 +263,21 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
-    .nav__wrapper .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         width: 60%;
         font-size: 24px;
         padding: 16px 0 0;
     }
 
-    .header__wrapper{
+    .content__wrapper .header__wrapper{
         width: 60%;
         padding-top: 80px;
     }
 
-    .header__wrapper .header{
+    .content__wrapper .header__wrapper .header{
         font-size: 56px;
     }
-    .header__wrapper .main__btn {
+    .content__wrapper .header__wrapper .main__btn {
         display: flex;
         flex-direction: row;
         justify-content: center;

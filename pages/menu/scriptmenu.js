@@ -15,7 +15,8 @@ const products = [
         price: 15.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'breakfast',
-        imgUrl: '/assets/images/pancakes.png'
+        imgUrl: '/assets/images/pancakes.png',
+        alt: 'pancakes with a chocolate glaze and some fruits on top and around it'
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ const products = [
         price: 13.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'lunch',
-        imgUrl: '/assets/images/burger.png'
+        imgUrl: '/assets/images/burger.png',
+        alt: 'a burger with a meat patty some salad and a portion of fries in front of it'
     },
     {
         id: 3,
@@ -31,7 +33,8 @@ const products = [
         price: 6.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'shakes',
-        imgUrl: '/assets/images/shake.png'
+        imgUrl: '/assets/images/shake.png',
+        alt: 'a light red milkshake in a glass with a strawberry in front of it and some slice up on the glass in the glass is a glass straw'
     },
     {
         id: 4,
@@ -39,7 +42,8 @@ const products = [
         price: 20.99,
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cumque eligendi esse laudantium magnam molestiae perspiciatis quibusdam rerum suscipit. Sapiente.',
         category: 'dinner',
-        imgUrl: '/assets/images/dinner.png'
+        imgUrl: '/assets/images/dinner.png',
+        alt: 'a plate with tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink'
     }
 ];
 
@@ -82,6 +86,7 @@ function renderFilteredProducts(filteredProducts) {
         productPrice.textContent = `$${product.price}`
         productImage.src = product.imgUrl;
         productImage.loading = "lazy";
+        productImage.alt = product.alt;
         productDescription.textContent = product.description
         productListDiv.appendChild(productWrapper);
         productWrapper.appendChild(productImage);

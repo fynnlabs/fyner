@@ -1,12 +1,11 @@
 @import url("/pages/menu/menu.css");
 
-:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__order, .link__menu{
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__menu, .link__order{
     color: var(--primaryGold);
     text-decoration: none;
     border-bottom: none;
     padding-bottom: 0;
 }
-
 
 .content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__about{
     color: var(--primaryGold);
@@ -28,7 +27,7 @@
 .content__wrapper .underline{
     border: 2px solid var(--primaryGold);
     width: 64px;
-    margin: 0 auto 32px;
+    margin: 0 auto 80px;
     opacity: 0.7;
 }
 
@@ -87,7 +86,7 @@
 }
 
 @media only screen and (min-width: 1000px){
-    .navigation{
+    .content__wrapper .nav__wrapper .navigation{
         width: 60%;
         font-size: 24px;
         padding: 16px 0 0;
