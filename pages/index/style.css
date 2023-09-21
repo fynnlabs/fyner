@@ -1,4 +1,9 @@
-@import url("/pages/menu/menu.css");
+@import url("/pages/menu/style.css");
+
+.nav__background{
+    background-color: var(--primaryBlue) !important;
+    width: 100%;
+}
 
 .content__wrapper{
     flex: none;

@@ -4,7 +4,6 @@
     --primaryGold: #c7a46c;
     --neutralBrown: #77603e;
     --neutralWhite: #e6e6e6;
-    --neutralBlue: #c3d0da;
     --primaryBlue: #040516;
 }
 
@@ -22,7 +21,7 @@ body {
     align-items: center;
     background-color: var(--primaryBlue);
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
 }
 
 .content__wrapper{
@@ -32,18 +31,18 @@ body {
 .content__wrapper .nav__wrapper {
     display: flex;
     justify-content: center;;
-    background-color: var(--primaryBlue);
+    background-color: transparent;
+    position: fixed;
     width: 100%;
+    z-index: 2;
+    top: 0;
 }
 
 .content__wrapper .nav__wrapper .navigation{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: fixed;
-    background-color: var(--primaryBlue);
-    top: 0;
-    z-index: 2;
+    background-color: inherit;
     padding: 16px 16px 0 16px;
     width: 100%;
 }
@@ -101,7 +100,7 @@ body {
 .content__wrapper .header__wrapper .underline{
     border: 2px solid var(--primaryGold);
     width: 64px;
-    margin: 0 auto 16px;
+    margin: 0 auto 40px;
     opacity: 0.7;
 }
 
@@ -185,6 +184,7 @@ body {
 }
 .footer__wrapper {
     margin-top: auto;
+    width: 100%;
 }
 
 .footer__wrapper .footer {
@@ -195,7 +195,6 @@ body {
     gap: 8px;
     left: 0;
     bottom: 0;
-    min-width: 100vw;
     height: fit-content;
     background-color: var(--primaryGold);
     text-align: center;

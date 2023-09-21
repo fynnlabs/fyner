@@ -1,4 +1,4 @@
-@import url("/pages/menu/menu.css");
+@import url("/pages/menu/style.css");
 
 :is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__menu, .link__order{
     color: var(--primaryGold);
@@ -27,7 +27,7 @@
 .content__wrapper .underline{
     border: 2px solid var(--primaryGold);
     width: 64px;
-    margin: 0 auto 80px;
+    margin: 0 auto 40px;
     opacity: 0.7;
 }
 
@@ -59,7 +59,7 @@
 
 :is(.content__wrapper .aboutus__wrapper .restaurant__wrapper .text__wrapper) .text__restaurant, .text__food{
     text-align: center;
-    padding-bottom: 24px;
+    padding-bottom: 80px;
     letter-spacing: 2px;
     color: var(--neutralWhite);
 }
@@ -84,8 +84,8 @@
         max-width: 50%;
     }
 
-    .underline{
-        margin: 0 auto 56px;
+    .content__wrapper .underline{
+        margin: 0 auto 80px;
     }
 }
 
@@ -111,7 +111,6 @@
         flex-direction: row;
         justify-content: space-evenly;
         padding-bottom: 100px;
-
     }
 
     :is(.content__wrapper .aboutus__wrapper) .food__wrapper{
@@ -154,10 +153,11 @@
         font-weight: normal;
         text-align: center;
         line-height: 28px;
+        padding-bottom: 24px;
     }
 }
-@media only screen and (max-width: 640px){
-    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list{
+@media only screen and (max-width: 640px) {
+    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -167,7 +167,7 @@
         background: var(--primaryBlue);
     }
 
-    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -175,7 +175,7 @@
         padding: 4px 0;
     }
 
-    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar {
         width: 30px;
         height: 4px;
         background: var(--primaryGold);
