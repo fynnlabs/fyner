@@ -65,6 +65,10 @@
 }
 
 @media only screen and (min-width: 640px){
+    .content__wrapper{
+        flex: none;
+    }
+
     .content__wrapper .nav__wrapper .navigation{
         padding: 16px 44px 0;
     }
