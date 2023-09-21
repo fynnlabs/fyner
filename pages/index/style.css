@@ -3,6 +3,7 @@
 .nav__background{
     background-color: var(--primaryBlue) !important;
     width: 100%;
+    padding-bottom: 8px;
 }
 
 .content__wrapper{

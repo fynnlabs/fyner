@@ -11,6 +11,7 @@ function toggleNavigation() {
     linkList.classList.toggle('show')
 }
 
+//adds a background to the navbar if not at the top of the page
 function addBackground(){
     const scrollHeight = window.scrollY
     if(scrollHeight > 0){
