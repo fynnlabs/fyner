@@ -47,19 +47,31 @@ const products = [
     }
 ];
 
-allBtn.addEventListener("click", function () {handleBtnClick("all")});
-breakfastBtn.addEventListener("click", function () {handleBtnClick("breakfast")});
-lunchBtn.addEventListener("click", function () {handleBtnClick("lunch")});
-shakesBtn.addEventListener("click", function () {handleBtnClick("shakes")});
-dinnerBtn.addEventListener("click", function () {handleBtnClick("dinner")});
-hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
+allBtn.addEventListener("click", function () {
+    handleBtnClick("all")
+});
+breakfastBtn.addEventListener("click", function () {
+    handleBtnClick("breakfast")
+});
+lunchBtn.addEventListener("click", function () {
+    handleBtnClick("lunch")
+});
+shakesBtn.addEventListener("click", function () {
+    handleBtnClick("shakes")
+});
+dinnerBtn.addEventListener("click", function () {
+    handleBtnClick("dinner")
+});
+hamburgerMenu.addEventListener('click', function () {
+    toggleNavigation()
+})
 
 
 //the initial render of the website with all products on it
 renderFilteredProducts(products);
 
 //if Btn clicked the website is rendered with the specific category
-function handleBtnClick(category){
+function handleBtnClick(category) {
     let filteredProducts
     /*filterProducts(category)*/
     if (category === 'all') {
@@ -81,7 +93,7 @@ function renderFilteredProducts(filteredProducts) {
         const productHeadline = document.createElement('div');
         const productPrice = document.createElement('div')
         const productDescription = document.createElement('div')
-        const productImage =document.createElement('img')
+        const productImage = document.createElement('img')
         productHeadline.textContent = product.name
         productPrice.textContent = `$${product.price}`
         productImage.src = product.imgUrl;
@@ -107,4 +119,3 @@ function renderFilteredProducts(filteredProducts) {
 function toggleNavigation() {
     linkList.classList.toggle('show')
 }
-
