@@ -5,6 +5,8 @@ const shakesBtn = document.getElementById('shakesBtn');
 const dinnerBtn = document.getElementById('dinnerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
+const shoppingCart = document.getElementById('shoppingCart')
+let shoppingNumber = 0
 
 const products = [
     {
@@ -41,10 +43,9 @@ const products = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         category: 'dinner',
         imgUrl: '/assets/images/dinner.png',
-        alt: 'a plate with tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink'
+        alt: 'a plate tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink'
     }
 ];
-
 
 allBtn.addEventListener("click", function () {
     handleBtnClick("all")
@@ -66,6 +67,10 @@ hamburgerMenu.addEventListener('click', function () {
     toggleNavigation()
 })
 
+shoppingCart.addEventListener('click', function () {
+    showShoppingCart()
+})
+
 renderFilteredProducts(products);
 
 function handleBtnClick(category) {
@@ -83,7 +88,7 @@ function handleBtnClick(category) {
 function renderFilteredProducts(filteredProducts) {
     const productListDiv = document.getElementById('products');
     productListDiv.innerHTML = ''; // Clear the existing content
-    filteredProducts.forEach(product => {
+    filteredProducts.forEach((product) => {
         const productWrapper = document.createElement('div');
         const productHeadDesWrapper = document.createElement('div');
         const productHeadline = document.createElement('div');
@@ -95,7 +100,6 @@ function renderFilteredProducts(filteredProducts) {
         productHeadline.textContent = product.name;
         productPrice.textContent = `$${product.price}`;
         plus.textContent = `+`;
-        plus.setAttribute("id", "plusBtn");
         productImage.src = product.imgUrl;
         productImage.loading = "lazy";
         productImage.alt = product.alt;
@@ -115,6 +119,10 @@ function renderFilteredProducts(filteredProducts) {
         productDescription.classList.add("text__description");
         productWrapper.classList.add("imagetext__wrapper");
         productHeadDesWrapper.classList.add("headDesWrapper");
+
+        plus.addEventListener('click', function () {
+            plusBtnClick();
+        });
     });
 }
 
@@ -123,3 +131,12 @@ function toggleNavigation() {
     linkList.classList.toggle('show');
 }
 
+function plusBtnClick() {
+    shoppingNumber += 1;
+    shoppingCart.innerHTML = `Warenkorb (${shoppingNumber})`
+}
+
+function showShoppingCart() {
+    console.log('moin')
+    shoppingCart.classList.toggle('shoppingCartBack')
+}

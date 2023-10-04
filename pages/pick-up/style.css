@@ -225,4 +225,13 @@ body {
         display: flex;
         flex-direction: column;
     }
+
+    .shoppingCartBack {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        background-color: var(--primaryGold);
+        padding: 16px 0 0;
+    }
 }
