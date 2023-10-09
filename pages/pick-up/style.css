@@ -226,12 +226,46 @@ body {
         flex-direction: column;
     }
 
-    .shoppingCartBack {
+    .shoppingCartPop {
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primaryGold);
+        width: 91vw;
+        height: fit-content;
+        visibility: hidden;
+        z-index: 5;
+        border-radius: 8px;
+        color: var(--neutralWhite);
+    }
+
+    .shoppingCartPop__header {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-        background-color: var(--primaryGold);
-        padding: 16px 0 0;
+        align-items: center;
+        height: 50px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .shoppingCartPop__orderBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 24px;
+        font-weight: 700;
+        background-color: var(--primaryBlue);
+        opacity: 0.7;
+    }
+
+    .shoppingCartPop__content {
+        padding: 16px 0;
+    }
+
+    .shoppingCartShow {
+        visibility: visible;
     }
 }

@@ -6,7 +6,10 @@ const dinnerBtn = document.getElementById('dinnerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 const shoppingCart = document.getElementById('shoppingCart')
+const shoppingCartPop = document.getElementById('shoppingCartPop')
+const shoppingCartPopContent = document.getElementById('shoppingCartPopContent')
 let shoppingNumber = 0
+let productName = null
 
 const products = [
     {
@@ -121,7 +124,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.classList.add("headDesWrapper");
 
         plus.addEventListener('click', function () {
-            plusBtnClick();
+            plusBtnClick(product);
         });
     });
 }
@@ -131,12 +134,17 @@ function toggleNavigation() {
     linkList.classList.toggle('show');
 }
 
-function plusBtnClick() {
+function plusBtnClick(product) {
     shoppingNumber += 1;
     shoppingCart.innerHTML = `Warenkorb (${shoppingNumber})`
+    productName = product.name
 }
 
 function showShoppingCart() {
-    console.log('moin')
-    shoppingCart.classList.toggle('shoppingCartBack')
+    shoppingCartPop.classList.toggle('shoppingCartShow');
+    if (shoppingNumber === 0) {
+        shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb'
+    } else if (shoppingNumber > 0) {
+        shoppingCartPopContent.textContent = `${productName}`
+    }
 }
