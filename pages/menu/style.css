@@ -45,7 +45,7 @@ body {
     justify-content: space-between;
     background-color: inherit;
     width: 100%;
-    padding: 16px 16px 0 16px;
+    padding: 16px;
 }
 
 .content__wrapper .nav__wrapper .navigation .navigation__logo {

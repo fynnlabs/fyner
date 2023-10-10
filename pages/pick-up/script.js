@@ -8,8 +8,13 @@ const linkList = document.getElementById('linkList')
 const shoppingCart = document.getElementById('shoppingCart')
 const shoppingCartPop = document.getElementById('shoppingCartPop')
 const shoppingCartPopContent = document.getElementById('shoppingCartPopContent')
+const shoppingCartPopOrderBtn = document.getElementById('shoppingCartPopOrderBtn')
+const totalPrice = document.createElement('div')
+
 let shoppingNumber = 0
-let productName = null
+let shoppingCartItems = []
+let count = true;
+
 
 const products = [
     {
@@ -19,7 +24,7 @@ const products = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         category: 'breakfast',
         imgUrl: '/assets/images/pancakes.png',
-        alt: 'pancakes with a chocolate glaze and some fruits on top and around it'
+        alt: 'pancakes with a chocolate glaze and some fruits on top and around it',
     },
     {
         id: 2,
@@ -28,7 +33,7 @@ const products = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         category: 'lunch',
         imgUrl: '/assets/images/burger.png',
-        alt: 'a burger with a meat patty some salad and a portion of fries in front of it'
+        alt: 'a burger with a meat patty some salad and a portion of fries in front of it',
     },
     {
         id: 3,
@@ -37,7 +42,7 @@ const products = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         category: 'shakes',
         imgUrl: '/assets/images/shake.png',
-        alt: 'a light red milkshake in a glass with a strawberry in front of it and some slice up on the glass in the glass is a glass straw'
+        alt: 'a light red milkshake in a glass with a strawberry in front of it and some slice up on the glass in the glass is a glass straw',
     },
     {
         id: 4,
@@ -46,7 +51,7 @@ const products = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
         category: 'dinner',
         imgUrl: '/assets/images/dinner.png',
-        alt: 'a plate tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink'
+        alt: 'a plate tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink',
     }
 ];
 
@@ -134,17 +139,64 @@ function toggleNavigation() {
     linkList.classList.toggle('show');
 }
 
+//adds the item to the shoppingCart
 function plusBtnClick(product) {
+
     shoppingNumber += 1;
     shoppingCart.innerHTML = `Warenkorb (${shoppingNumber})`
-    productName = product.name
+
+    shoppingCartPopContent.textContent = ''
+    const cartItem = shoppingCartItems.find(item => item.id === product.id)
+
+    if (cartItem) {
+        cartItem.quantity += 1;
+    } else {
+        const clonedProduct = {...product, quantity: 1};
+        shoppingCartItems.push(clonedProduct)
+    }
+
+
+    updateTotalPrice();
+    shoppingCartItems.forEach(item => {
+        const shoppingCartItemWrapper = document.createElement('div')
+        const shoppingCartItemName = document.createElement('div');
+        const shoppingCartItemPrice = document.createElement('div')
+        let itemPrice = item.price * item.quantity
+        shoppingCartItemName.textContent = `${item.name} (${item.quantity})`;
+        shoppingCartItemPrice.textContent = `${itemPrice.toFixed(2)}`
+        shoppingCartItemName.classList.add('shoppingCartItem__name')
+        shoppingCartItemWrapper.classList.add('shoppingCartItem__wrapper')
+        shoppingCartPopContent.appendChild(shoppingCartItemWrapper)
+        shoppingCartItemWrapper.appendChild(shoppingCartItemName);
+        shoppingCartItemWrapper.appendChild(shoppingCartItemPrice);
+    });
+    shoppingCartPopContent.appendChild(totalPrice);
+    shoppingCartPopOrderBtn.style.opacity = 1;
 }
 
+//toggles the shoppingCart
 function showShoppingCart() {
+    updateTotalPrice();
     shoppingCartPop.classList.toggle('shoppingCartShow');
-    if (shoppingNumber === 0) {
-        shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb'
-    } else if (shoppingNumber > 0) {
-        shoppingCartPopContent.textContent = `${productName}`
+    if (shoppingNumber === 0 && count === true) {
+        const shopppingCartPlaceholder = document.createElement('div')
+        shopppingCartPlaceholder.textContent = 'Noch keine Einträge im Warenkorb'
+        shopppingCartPlaceholder.classList.add('shopppingCart__placeholder')
+        shoppingCartPopContent.appendChild(shopppingCartPlaceholder)
+        count = false;
     }
+
+}
+
+function calculateTotalPrice() {
+    let total = 0;
+    for (const item of shoppingCartItems) {
+        total += item.price * item.quantity;
+    }
+    return total;
+}
+
+function updateTotalPrice() {
+    const totalAmount = calculateTotalPrice();
+    totalPrice.textContent = `Summe: $${totalAmount.toFixed(2)}`;
 }
