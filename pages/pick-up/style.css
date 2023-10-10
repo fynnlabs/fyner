@@ -320,6 +320,22 @@ body {
     .products__wrapper {
         width: 100%;
     }
+
+    .shoppingCartPop {
+        width: 20%;
+        visibility: visible;
+        left: 100%;
+        top: 128px;
+        transform: translate(-100%, 0%);
+    }
+
+    .shoppingCart {
+        visibility: hidden;
+    }
+
+    .shoppingCartPop__orderBtn {
+        background-color: var(--backgroundProducts);
+    }
 }
 
 @media only screen and (max-width: 640px) {
