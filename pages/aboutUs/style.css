@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 0 0 0;
+    padding-top: 80px;
     color: var(--neutralWhite);
     font-size: 40px;
     font-weight: 900;
@@ -72,10 +72,6 @@
     .content__wrapper {
         flex: none;
         height: 100%;
-    }
-
-    .content__wrapper .nav__wrapper .navigation {
-        padding: 16px 44px 0;
     }
 
     :is(.content__wrapper .aboutus__wrapper) .restaurant__wrapper, .food__wrapper {

@@ -1,43 +1,43 @@
 @import url("/pages/menu/style.css");
 
-.nav__background{
+.nav__background {
     background-color: var(--primaryBlue) !important;
     width: 100%;
     padding-bottom: 8px;
 }
 
-.content__wrapper{
+.content__wrapper {
     flex: none;
 }
 
-.content__wrapper .nav__wrapper .navigation{
+.content__wrapper .nav__wrapper .navigation {
     background: transparent;
 }
 
-.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__menu{
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__menu {
     border-bottom: none;
     padding-bottom: 0;
 }
 
-.content__wrapper .content{
+.content__wrapper .content {
     padding: 32px;
 }
 
-.content__wrapper .content .image__background{
+.content__wrapper .content .image__background {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     height: 70vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(29,29,29,0.6),#040516),linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
-    linear-gradient(to top, rgba(0,0,0,0),rgba(29,29,29,0.05),#040516),
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(29, 29, 29, 0.6), #040516), linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(to top, rgba(0, 0, 0, 0), rgba(29, 29, 29, 0.05), #040516),
     url("../../assets/images/restaurant.png");
     background-size: cover;
     color: var(--primaryGold);
     font-size: 56px;
 }
 
-.content__wrapper .content .image__background .cta__btn{
+.content__wrapper .content .image__background .cta__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,11 +54,12 @@
     text-transform: uppercase;
 }
 
-.content__wrapper .content .image__background .cta__btn:hover{
+.content__wrapper .content .image__background .cta__btn:hover {
     box-shadow: -1px -1px 4px var(--primaryGold), 1px 1px 4px var(--neutralBrown);
     cursor: pointer;
 }
-.content__wrapper .content .catchy__text{
+
+.content__wrapper .content .catchy__text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,22 +71,18 @@
     line-height: 24px;
 }
 
-@media only screen and (min-width: 640px){
-    .content__wrapper .nav__wrapper .navigation{
-        padding: 16px 44px 0;
-    }
-
-    .content__wrapper .content{
+@media only screen and (min-width: 640px) {
+    .content__wrapper .content {
         padding: 0;
     }
 
-    .content__wrapper .content .catchy__text{
+    .content__wrapper .content .catchy__text {
         padding: 0 44px;
     }
 }
 
-@media only screen and (min-width: 1000px){
-    .content__wrapper .nav__wrapper .navigation{
+@media only screen and (min-width: 1000px) {
+    .content__wrapper .nav__wrapper .navigation {
         width: 60%;
         padding: 16px 0 8px;
         font-size: 24px;
@@ -97,18 +94,18 @@
         flex-direction: column;
     }
 
-    .content__wrapper .content .image__background{
+    .content__wrapper .content .image__background {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    .content__wrapper .content .image__background .cta__btn{
+    .content__wrapper .content .image__background .cta__btn {
         font-size: 32px;
         padding: 10px 24px;
     }
 
-    .content__wrapper  .content .catchy__text{
+    .content__wrapper .content .catchy__text {
         width: 45%;
         margin: 0 auto;
         font-size: 24px;
@@ -117,8 +114,8 @@
     }
 }
 
-@media only screen and (max-width: 640px){
-    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list{
+@media only screen and (max-width: 640px) {
+    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -128,15 +125,15 @@
         background: var(--primaryBlue);
     }
 
-    .content__wrapper .content{
+    .content__wrapper .content {
         padding: 0;
     }
 
-    .content__wrapper .content .catchy__text{
+    .content__wrapper .content .catchy__text {
         padding: 0 32px;
     }
 
-    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -144,7 +141,7 @@
         padding: 4px 0;
     }
 
-    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar{
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger__menu .bar {
         width: 30px;
         height: 4px;
         background: var(--primaryGold);

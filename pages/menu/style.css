@@ -233,7 +233,7 @@ body {
     }
 
     .content__wrapper .nav__wrapper .navigation {
-        padding: 16px 44px 0;
+        font-size: 24px;
     }
 
     .content__wrapper .header__wrapper {
