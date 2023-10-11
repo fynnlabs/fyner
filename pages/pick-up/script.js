@@ -98,6 +98,7 @@ function handleBtnClick(category) {
     renderFilteredProducts(filteredProducts);
 }
 
+//renders the products
 function renderFilteredProducts(filteredProducts) {
     const productListDiv = document.getElementById('products');
     productListDiv.innerHTML = ''; // Clear the existing content
@@ -150,13 +151,13 @@ function toggleNavigation() {
 
 //adds the item to the shoppingCart
 function plusBtnClick(product) {
-
     shoppingNumber += 1;
     shoppingCart.innerHTML = `Warenkorb (${shoppingNumber})`
 
     shoppingCartPopContent.textContent = ''
-    const cartItem = shoppingCartItems.find(item => item.id === product.id)
 
+    //checks if the product exists in the cart if so then the quantity is upped if not the product gets added and gets the quantity attribute
+    const cartItem = shoppingCartItems.find(item => item.id === product.id)
     if (cartItem) {
         cartItem.quantity += 1;
     } else {
@@ -164,8 +165,9 @@ function plusBtnClick(product) {
         shoppingCartItems.push(clonedProduct)
     }
 
-
     updateTotalPrice();
+
+    //renders each product from shoppingCartItems in the shopping cart
     shoppingCartItems.forEach(item => {
         const shoppingCartItemWrapper = document.createElement('div')
         const shoppingCartItemName = document.createElement('div');
@@ -186,7 +188,6 @@ function plusBtnClick(product) {
     totalWrapper.classList.add('total__wrapper')
     totalText.classList.add('total__text')
     shoppingCartPopOrderBtn.style.opacity = 1;
-
     itemsInShoppingCart = true;
 }
 
@@ -207,6 +208,7 @@ function showShoppingCart() {
 
 }
 
+//calculates the total price from all shopping cart items
 function calculateTotalPrice() {
     let total = 0;
     for (const item of shoppingCartItems) {
@@ -215,12 +217,14 @@ function calculateTotalPrice() {
     return total;
 }
 
+//updates the total price
 function updateTotalPrice() {
     const totalAmount = calculateTotalPrice();
     totalPrice.textContent = `$${totalAmount.toFixed(2)}`;
     totalText.textContent = `Summe:`
 }
 
+//makes the orderBtn work to give an alert that it is ordered and clears shopping cart
 function shoppingCartPopOrderBtnClick() {
     if (itemsInShoppingCart) {
         alert('Deine Bestellung wurde aufgenommen.')

@@ -274,7 +274,7 @@ body {
 
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1500px) {
     .content__wrapper {
         flex: none;
     }
@@ -316,6 +316,7 @@ body {
         flex-direction: row;
         flex: 1;
         padding-bottom: 48px;
+        flex-basis: 50%;
     }
 
     .left__image {

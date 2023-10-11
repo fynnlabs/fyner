@@ -122,7 +122,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        padding-bottom: 16px;
+        padding-bottom: 500px;
     }
 
     .text__wrapper {
@@ -135,13 +135,13 @@
     }
 
     .content__wrapper .aboutus__wrapper .restaurant__wrapper .image__restaurant {
-        max-width: 30%;
+        max-width: 25%;
         flex: 1;
         transform: scale(1.5);
     }
 
     .content__wrapper .aboutus__wrapper .food__wrapper .image__food {
-        max-width: 30%;
+        max-width: 25%;
         order: 2;
         rotate: 3deg;
         flex: 1;
