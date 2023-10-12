@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch:scss_aboutUs": "node-sass -w pages/aboutUs/styles.scss pages/aboutUs/style.css",
+    "watch:scss_index": "node-sass -w pages/index/styles.scss pages/index/style.css",
+    "watch:scss_menu": "node-sass -w pages/menu/styles.scss pages/menu/style.css",
+    "watch:scss_pick-up": "node-sass -w pages/pick-up/styles.scss pages/pick-up/style.css"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0",
+    "onchange": "^7.1.0"
+  }
+}
