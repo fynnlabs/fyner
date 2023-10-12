@@ -1,0 +1,254 @@
+@import url("/pages/menu/style.css");
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__about, .link__menu {
+  color: #c7a46c;
+  text-decoration: none;
+  border-bottom: none !important; }
+
+.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__order {
+  color: #c7a46c;
+  text-decoration: none;
+  border-bottom: 2px dotted #c7a46c;
+  padding-bottom: 2px; }
+
+.content__wrapper .main__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 80px 16px 8px;
+  position: fixed;
+  width: 100%;
+  background-color: #040516;
+  z-index: 1;
+  left: 0; }
+  .content__wrapper .main__btn .all__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    height: 24px;
+    width: fit-content;
+    padding: 8px;
+    color: #c7a46c;
+    box-shadow: -1px -1px 4px #c7a46c, 1px 1px 4px #77603e; }
+    .content__wrapper .main__btn .all__btn:hover {
+      color: #e6e6e6;
+      background-color: #c7a46c;
+      cursor: pointer; }
+
+.content__wrapper .products__wrapper {
+  padding: 144px 16px 50px;
+  margin: 0 auto; }
+
+.content__wrapper .shoppingCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: #e6e6e6;
+  background-color: #c7a46c;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  font-weight: 700; }
+
+.content__wrapper .blend__background {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent; }
+  .content__wrapper .blend__background .shoppingCartPop {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c7a46c;
+    width: 91vw;
+    height: fit-content;
+    visibility: hidden;
+    z-index: 5;
+    border-radius: 8px;
+    color: #e6e6e6; }
+    .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      font-size: 24px;
+      font-weight: 700; }
+    .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__content {
+      display: flex;
+      flex-direction: column;
+      padding: 16px; }
+    .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__orderBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 0 7px 7px;
+      height: 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background-color: #040516;
+      opacity: 0.4;
+      user-input: none; }
+
+.shoppingCartShow {
+  visibility: visible; }
+
+.shoppingCartItem__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0; }
+
+.shoppingCart__placeholder {
+  width: 100%;
+  text-align: center; }
+
+.backgroundBlendShow {
+  visibility: inherit; }
+
+.total__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px dotted #040516; }
+
+.total__text {
+  font-weight: 700; }
+
+.text__headline {
+  padding: 0 0 12px;
+  color: #c7a46c;
+  font-weight: 700; }
+
+.text__description {
+  color: #e6e6e6; }
+
+.image {
+  min-width: 100%;
+  max-width: 100%;
+  height: 240px;
+  transform: scale(0.8);
+  border-radius: 8px;
+  border: 2px solid #c7a46c; }
+
+.pricePlusWrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.price {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: 900;
+  color: #e6e6e6; }
+
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 100%;
+  color: #e6e6e6;
+  background-color: #c7a46c;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 8px; }
+
+.imagetext__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background-color: #070925; }
+
+.text__wrapper {
+  display: flex;
+  flex-direction: column; }
+
+@media only screen and (min-width: 640px) {
+  .content__wrapper .nav__wrapper .navigation {
+    font-size: 24px; }
+  .content__wrapper .blend__background .shoppingCartPop {
+    width: 60%; }
+  .imagetext__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .textWrapper {
+    height: 50%;
+    flex: 1;
+    order: 2; }
+  .pricePlusWrapper {
+    margin-left: 50%;
+    width: 100%;
+    order: 3; }
+  .image {
+    min-width: 50%;
+    max-width: 50%; }
+  .products {
+    gap: 0; } }
+
+@media only screen and (min-width: 1440px) {
+  .content__wrapper .nav__wrapper .navigation {
+    width: 60%;
+    padding: 16px 0; }
+  .content__wrapper .main__btn {
+    justify-content: center;
+    font-size: 20px;
+    gap: 120px;
+    width: 60%;
+    margin-left: 20%; }
+  .content__wrapper .products__wrapper {
+    width: 100%; }
+  .content__wrapper .blend__background .shoppingCartPop {
+    width: 15%;
+    visibility: visible;
+    left: 95%;
+    top: 124px;
+    transform: translate(-100%, 0%); }
+    .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__orderBtn {
+      background-color: #070925; }
+  .content__wrapper .shoppingCart {
+    visibility: hidden; }
+  .products {
+    display: flex;
+    flex-direction: column; } }
+
+@media only screen and (max-width: 640px) {
+  .content__wrapper {
+    flex: 1; }
+    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #040516;
+      z-index: 2; }
+    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 4px 0; }
+      .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu .bar {
+        width: 30px;
+        height: 4px;
+        background: #c7a46c;
+        opacity: 0.7; }
+  .show {
+    display: flex !important;
+    justify-content: center;
+    align-items: center; }
+  .footer__wrapper .footer .infos {
+    display: flex;
+    flex-direction: column; } }
