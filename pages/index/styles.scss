@@ -127,7 +127,7 @@
 
 @media only screen and (max-width: 640px) {
   .content__wrapper {
-    &.nav__wrapper {
+    .nav__wrapper {
       .navigation {
         .navigation__links {
           &.link__list{
@@ -140,7 +140,7 @@
             background: $primaryBlue;
           }
 
-          &.hamburger__menu{
+          .hamburger__menu{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -158,7 +158,7 @@
       }
     }
 
-    &.content{
+    .content{
       padding: 0;
 
       .catchy__text{
@@ -166,7 +166,6 @@
       }
     }
   }
-
   .show {
     display: flex !important;
     justify-content: center;

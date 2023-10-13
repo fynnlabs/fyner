@@ -49,24 +49,9 @@
     margin: 0 auto;
     padding: 0 32px;
 
-    & .restaurant__wrapper {
-      & .image__restaurant {
-        max-height: 250px;
-        width: 100%;
-        rotate: -3deg;
-      }
-    }
-    & .food__wrapper {
-      & .image__food {
-        max-height: 250px;
-        width: 100%;
-        rotate: -3deg;
-      }
-    }
-
-    & .restaurant__wrapper {
+    .restaurant__wrapper {
       .text__wrapper {
-        & .header__restaurant {
+        .header__restaurant {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -76,11 +61,22 @@
           color: $primaryGold;
           letter-spacing: 2px;
         }
+        .text__restaurant {
+          text-align: center;
+          padding-bottom: 80px;
+          letter-spacing: 2px;
+          color: $neutralWhite;
+        }
+      }
+      .image__restaurant {
+        max-height: 250px;
+        width: 100%;
+        rotate: -3deg;
       }
     }
-    & .food__wrapper {
+    .food__wrapper {
       .text__wrapper {
-        & .header__food {
+        .header__food {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -90,27 +86,17 @@
           color: $primaryGold;
           letter-spacing: 2px;
         }
-      }
-    }
-
-    & .restaurant__wrapper {
-      .text__wrapper {
-        & .text__restaurant {
+        .text__food {
           text-align: center;
           padding-bottom: 80px;
           letter-spacing: 2px;
           color: $neutralWhite;
         }
       }
-    }
-    & .food__wrapper {
-      .text__wrapper {
-        & .text__food {
-          text-align: center;
-          padding-bottom: 80px;
-          letter-spacing: 2px;
-          color: $neutralWhite;
-        }
+      .image__food {
+        max-height: 250px;
+        width: 100%;
+        rotate: -3deg;
       }
     }
   }
@@ -121,21 +107,21 @@
     flex: none;
     height: 100%;
     .aboutus__wrapper {
-      & .restaurant__wrapper,
-      & .food__wrapper{
+      .restaurant__wrapper,
+      .food__wrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
 
-      & .restaurant__wrapper {
-        & .image__restaurant {
+      .restaurant__wrapper {
+        .image__restaurant {
           max-width: 50%;
         }
       }
-      & .food__wrapper {
-        & .image__food {
+      .food__wrapper {
+        .image__food {
           max-width: 50%;
         }
       }
@@ -155,68 +141,67 @@
         padding: 16px 0 0;
       }
     }
-  }
-
-  .content__wrapper {
     .header {
       font-size: 56px;
       padding-top: 80px;
     }
-  }
-
-  .content__wrapper {
     .aboutus__wrapper {
       padding: 0;
       width: 60%;
-    }
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
       .restaurant__wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         padding-bottom: 150px;
-      }
-    }
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
-      .food__wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding-bottom: 500px;
-      }
-    }
-  }
-
-  .text__wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    max-width: 50%;
-    order: 1;
-    padding: 0 32px;
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
-      .restaurant__wrapper {
+        .text__wrapper {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          max-width: 50%;
+          order: 1;
+          padding: 0 32px;
+          .header__restaurant {
+            padding-top: 0;
+            font-size: 32px;
+          }
+          .text__restaurant {
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 28px;
+            padding-bottom: 24px;
+          }
+        }
         .image__restaurant {
           max-width: 25%;
           flex: 1;
           transform: scale(1.5);
         }
       }
-    }
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
       .food__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 500px;
+        .text__wrapper {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          max-width: 50%;
+          order: 1;
+          padding: 0 32px;
+          .header__food {
+            padding-top: 0;
+            font-size: 32px;
+          }
+          .text__food {
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 28px;
+            padding-bottom: 24px;
+          }
+        }
         .image__food {
           max-width: 25%;
           order: 2;
@@ -226,94 +211,5 @@
         }
       }
     }
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
-      & .restaurant__wrapper {
-        .text__wrapper {
-          & .header__restaurant {
-            padding-top: 0;
-            font-size: 32px;
-          }
-        }
-      }
-
-      & .food__wrapper {
-        .text__wrapper {
-          & .header__food {
-            padding-top: 0;
-            font-size: 32px;
-          }
-        }
-      }
-    }
-  }
-
-  .content__wrapper {
-    .aboutus__wrapper {
-      & .restaurant__wrapper {
-        .text__wrapper {
-          & .text__restaurant {
-            font-size: 20px;
-            font-weight: normal;
-            text-align: center;
-            line-height: 28px;
-            padding-bottom: 24px;
-          }
-        }
-      }
-
-      & .food__wrapper {
-        .text__wrapper {
-          & .text__food {
-            font-size: 20px;
-            font-weight: normal;
-            text-align: center;
-            line-height: 28px;
-            padding-bottom: 24px;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .content__wrapper {
-    .nav__wrapper {
-      .navigation {
-        .navigation__links {
-          .link__list {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            background: $primaryBlue;
-          }
-          .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding: 4px 0;
-            .bar {
-              width: 30px;
-              height: 4px;
-              background: $primaryGold;
-              opacity: 0.7;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .show {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
   }
 }

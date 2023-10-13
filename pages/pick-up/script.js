@@ -16,6 +16,7 @@ let shoppingNumber = 0
 let shoppingCartItems = []
 let count = true;
 let itemsInShoppingCart = false
+let cartItem = []
 
 const products = [
     {
@@ -137,11 +138,12 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.classList.add("headDesWrapper");
         textWrapper.classList.add("textWrapper")
 
-        shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb';
         plus.addEventListener('click', function () {
             plusBtnClick(product);
         });
     });
+    shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb'
+
 }
 
 //toggles the hamburger menu
@@ -157,7 +159,7 @@ function plusBtnClick(product) {
     shoppingCartPopContent.textContent = ''
 
     //checks if the product exists in the cart if so then the quantity is upped if not the product gets added and gets the quantity attribute
-    const cartItem = shoppingCartItems.find(item => item.id === product.id)
+    cartItem = shoppingCartItems.find(item => item.id === product.id)
     if (cartItem) {
         cartItem.quantity += 1;
     } else {
@@ -196,16 +198,19 @@ const backgroundPop = document.getElementById('backgroundPop')
 //toggles the shoppingCart
 function showShoppingCart() {
     updateTotalPrice();
-    shoppingCartPop.classList.toggle('shoppingCartShow');
-    backgroundPop.classList.toggle('backgroundBlendShow')
     if (shoppingNumber === 0 && count === true) {
         const shoppingCartPlaceholder = document.createElement('div')
-        shoppingCartPlaceholder.textContent = 'Noch keine Einträge im Warenkorb'
         shoppingCartPlaceholder.classList.add('shoppingCart__placeholder')
         shoppingCartPopContent.appendChild(shoppingCartPlaceholder)
         count = false;
     }
-
+    if(shoppingCartPop.style.visibility === "visible"){
+        shoppingCartPop.style.visibility = "hidden"
+        backgroundPop.style.visibility = "hidden"
+    } else{
+        shoppingCartPop.style.visibility = "visible"
+        backgroundPop.style.visibility = "visible"
+    }
 }
 
 //calculates the total price from all shopping cart items
@@ -229,6 +234,9 @@ function shoppingCartPopOrderBtnClick() {
     if (itemsInShoppingCart) {
         alert('Deine Bestellung wurde aufgenommen.')
         shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb'
-
+        shoppingCartPopOrderBtn.style.opacity = 0.4;
+        shoppingCart.innerHTML = 'Warenkorb (0)'
+        shoppingCartItems = [];
     }
+
 }

@@ -99,9 +99,6 @@
       opacity: 0.4;
       user-input: none; }
 
-.shoppingCartShow {
-  visibility: visible; }
-
 .shoppingCartItem__wrapper {
   display: flex;
   justify-content: space-between;
@@ -110,9 +107,6 @@
 .shoppingCart__placeholder {
   width: 100%;
   text-align: center; }
-
-.backgroundBlendShow {
-  visibility: inherit; }
 
 .total__wrapper {
   display: flex;

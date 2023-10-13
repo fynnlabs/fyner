@@ -1,4 +1,4 @@
-@import url("/pages/menu/style.css"), "variables";
+@import url("/pages/menu/style.css"); "variables";
 
 :is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__about, .link__menu {
   color: $primaryGold;
@@ -6,14 +6,23 @@
   border-bottom: none !important;
 }
 
-.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__order {
-  color: $primaryGold;
-  text-decoration: none;
-  border-bottom: 2px dotted $primaryGold;
-  padding-bottom: 2px;
-}
-
 .content__wrapper {
+  .nav__wrapper {
+    .navigation {
+      .navigation__links {
+        .link__list {
+          .link {
+            .link__order{
+              color: $primaryGold;
+              text-decoration: none;
+              border-bottom: 2px dotted $primaryGold;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
   .main__btn {
     display: flex;
     flex-direction: row;
@@ -120,10 +129,6 @@
   }
 }
 
-.shoppingCartShow {
-  visibility: visible;
-}
-
 .shoppingCartItem__wrapper {
   display: flex;
   justify-content: space-between;
@@ -135,10 +140,6 @@
   text-align: center;
 }
 
-
-.backgroundBlendShow {
-  visibility: inherit;
-}
 
 .total__wrapper {
   display: flex;
@@ -295,57 +296,5 @@
   .products{
     display: flex;
     flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .content__wrapper {
-    flex: 1;
-    .nav__wrapper {
-      .navigation {
-        .navigation__links{
-          .link__list{
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            background: $primaryBlue;
-            z-index: 2;
-          }
-
-          .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            padding: 4px 0;
-
-            .bar {
-              width: 30px;
-              height: 4px;
-              background: $primaryGold;
-              opacity: 0.7;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .show {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer__wrapper {
-    .footer {
-      .infos{
-        display: flex;
-        flex-direction: column;
-      }
-    }
   }
 }
