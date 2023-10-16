@@ -237,7 +237,8 @@ body {
     flex-direction: row;
     flex: 1;
     padding-bottom: 48px;
-    flex-basis: 50%; }
+    flex-basis: 45%;
+    margin: 0 4px; }
   .left__image {
     min-width: 288px;
     max-width: 288px; }

@@ -4,8 +4,14 @@
   width: 100%;
   padding-bottom: 8px; }
 
+:is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__about, .link__menu, .link__order {
+  color: #c7a46c;
+  text-decoration: none;
+  border-bottom: none !important; }
+
 .content__wrapper {
-  flex: none; }
+  flex: none;
+  height: 100%; }
   .content__wrapper .content {
     padding: 32px; }
     .content__wrapper .content .image__background {
@@ -49,7 +55,11 @@
       text-align: center;
       padding: 16px 16px 0;
       color: #e6e6e6;
-      line-height: 24px; }
+      line-height: 32px;
+      font-size: 24px; }
+
+.footer__wrapper .footer {
+  margin-top: 120px; }
 
 @media only screen and (min-width: 640px) {
   .content__wrapper .content {

@@ -1,6 +1,5 @@
-
-const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
+const hamburgerMenu = document.getElementById('hamburgerMenu')
 const navigation= document.getElementById('navigation')
 
 hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
@@ -20,4 +19,3 @@ function addBackground(){
     navigation.classList.remove("nav__background")
     }
 }
-

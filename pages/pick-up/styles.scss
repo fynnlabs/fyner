@@ -1,4 +1,4 @@
-@import url("/pages/menu/style.css"); "variables";
+@import url("/pages/menu/style.css"), "variables";
 
 :is(.content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link) .link__about, .link__menu {
   color: $primaryGold;
@@ -23,6 +23,7 @@
       }
     }
   }
+
   .main__btn {
     display: flex;
     flex-direction: row;
@@ -123,7 +124,6 @@
         font-weight: 700;
         background-color: $primaryBlue;
         opacity: 0.4;
-        user-input: none;
       }
     }
   }
@@ -198,6 +198,10 @@
   border-radius: 8px;
 }
 
+.plus:hover{
+  cursor: pointer;
+}
+
 .imagetext__wrapper {
   display: flex;
   flex-direction: column;
@@ -219,6 +223,7 @@
         font-size: 24px;
       }
     }
+
     .blend__background {
       .shoppingCartPop {
         width: 60%;
@@ -272,6 +277,12 @@
 
     .products__wrapper {
       width: 100%;
+
+      .products{
+        .imagetext__wrapper{
+          min-width: 920px;
+        }
+      }
     }
 
     .blend__background{
@@ -284,6 +295,10 @@
 
         .shoppingCartPop__orderBtn {
           background-color: $backgroundProducts;
+        }
+
+        .shoppingCartPop__orderBtnHover{
+          cursor: pointer;
         }
       }
     }

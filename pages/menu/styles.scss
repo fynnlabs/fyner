@@ -21,6 +21,7 @@ body {
 
 .content__wrapper {
   height: 100vh;
+
   .nav__wrapper{
     display: flex;
     justify-content: center;;
@@ -30,6 +31,7 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
+
     .navigation{
       display: flex;
       flex-direction: row;
@@ -37,6 +39,7 @@ body {
       background-color: inherit;
       width: 100%;
       padding: 16px;
+
       .navigation__logo{
         background-color: $primaryGold;
         color: $neutralWhite;
@@ -44,6 +47,7 @@ body {
         border-radius: 8px;
         text-decoration: none;
       }
+
       .navigation__links {
         .link__list{
           display: flex;
@@ -51,6 +55,7 @@ body {
           gap: 32px;
           padding-top: 8px;
           list-style: none;
+
           .link {
             .link__menu{
               color: $primaryGold;
@@ -63,6 +68,7 @@ body {
       }
     }
   }
+
   .header__wrapper{
     display: flex;
     justify-content: center;
@@ -76,12 +82,14 @@ body {
     background-color: $primaryBlue;
     z-index: 1;
     margin: 0 auto;
+
     .underline{
       border: 2px solid $primaryGold;
       width: 64px;
       margin: 0 auto 40px;
       opacity: 0.7;
     }
+
     .header{
       display: flex;
       justify-content: center;
@@ -92,11 +100,13 @@ body {
       font-size: 40px;
       color: $neutralWhite;
     }
+
     .main__btn{
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       padding: 8px 16px;
+
       .all__btn{
         display: flex;
         justify-content: center;
@@ -211,6 +221,7 @@ body {
 .footer__wrapper {
   margin-top: auto;
   width: 100%;
+
   .footer{
     display: flex;
     flex-direction: column;
@@ -225,17 +236,20 @@ body {
     font-size: 12px;
     margin-top: 80px;
     padding: 16px 0;
+
     .infos{
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 16px;
+
       .link__info{
         text-decoration: none;
         color: $primaryBlue;
         border-bottom: 1px dotted $primaryBlue;
       }
     }
+
     .link__restaurant{
       text-decoration: none;
       color: $primaryBlue;
@@ -248,11 +262,13 @@ body {
 @media only screen and (min-width: 640px) {
   .content__wrapper {
     flex: 1;
+
     .nav__wrapper {
       .navigation{
         font-size: 24px;
       }
     }
+
     .header__wrapper{
       padding: 80px 0;
     }
@@ -295,6 +311,7 @@ body {
 @media only screen and (min-width: 1500px) {
   .content__wrapper {
     flex: none;
+
     .nav__wrapper {
       .navigation{
         width: 60%;
@@ -302,12 +319,15 @@ body {
         padding: 16px 0 0;
       }
     }
+
     .header__wrapper{
       width: 80%;
       padding-top: 80px;
+
       .header{
         font-size: 56px;
       }
+
       .main__btn{
         display: flex;
         flex-direction: row;
@@ -332,7 +352,8 @@ body {
     flex-direction: row;
     flex: 1;
     padding-bottom: 48px;
-    flex-basis: 50%;
+    flex-basis: 45%;
+    margin: 0 4px;
   }
 
   .left__image {
@@ -349,6 +370,7 @@ body {
 @media only screen and (max-width: 640px) {
   .content__wrapper {
     flex: 1;
+
     .nav__wrapper {
       .navigation {
         .navigation__links {
@@ -362,12 +384,14 @@ body {
             background: $primaryBlue;
             z-index: 2;
           }
+
           .hamburger-menu{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
             padding: 4px 0;
+
             .bar{
               width: 30px;
               height: 4px;

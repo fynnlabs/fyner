@@ -96,8 +96,7 @@
       font-size: 24px;
       font-weight: 700;
       background-color: #040516;
-      opacity: 0.4;
-      user-input: none; }
+      opacity: 0.4; }
 
 .shoppingCartItem__wrapper {
   display: flex;
@@ -156,13 +155,16 @@
   font-weight: 700;
   border-radius: 8px; }
 
+.plus:hover {
+  cursor: pointer; }
+
 .imagetext__wrapper {
   display: flex;
   flex-direction: column;
   padding: 16px;
   border-radius: 12px;
   margin-bottom: 24px;
-  background-color: #070925; }
+  background-color: #0A1E3F; }
 
 .text__wrapper {
   display: flex;
@@ -202,6 +204,8 @@
     margin-left: 20%; }
   .content__wrapper .products__wrapper {
     width: 100%; }
+    .content__wrapper .products__wrapper .products .imagetext__wrapper {
+      min-width: 920px; }
   .content__wrapper .blend__background .shoppingCartPop {
     width: 15%;
     visibility: visible;
@@ -209,40 +213,11 @@
     top: 124px;
     transform: translate(-100%, 0%); }
     .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__orderBtn {
-      background-color: #070925; }
+      background-color: #0A1E3F; }
+    .content__wrapper .blend__background .shoppingCartPop .shoppingCartPop__orderBtnHover {
+      cursor: pointer; }
   .content__wrapper .shoppingCart {
     visibility: hidden; }
   .products {
-    display: flex;
-    flex-direction: column; } }
-
-@media only screen and (max-width: 640px) {
-  .content__wrapper {
-    flex: 1; }
-    .content__wrapper .nav__wrapper .navigation .navigation__links .link__list {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background: #040516;
-      z-index: 2; }
-    .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      padding: 4px 0; }
-      .content__wrapper .nav__wrapper .navigation .navigation__links .hamburger-menu .bar {
-        width: 30px;
-        height: 4px;
-        background: #c7a46c;
-        opacity: 0.7; }
-  .show {
-    display: flex !important;
-    justify-content: center;
-    align-items: center; }
-  .footer__wrapper .footer .infos {
     display: flex;
     flex-direction: column; } }

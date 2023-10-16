@@ -9,6 +9,7 @@ const shoppingCart = document.getElementById('shoppingCart')
 const shoppingCartPop = document.getElementById('shoppingCartPop')
 const shoppingCartPopContent = document.getElementById('shoppingCartPopContent')
 const shoppingCartPopOrderBtn = document.getElementById('shoppingCartPopOrderBtn')
+const backgroundPop = document.getElementById('backgroundPop')
 const totalWrapper = document.createElement('div')
 const totalText = document.createElement('span')
 const totalPrice = document.createElement('span')
@@ -83,6 +84,10 @@ shoppingCart.addEventListener('click', function () {
 
 shoppingCartPopOrderBtn.addEventListener('click', function () {
     shoppingCartPopOrderBtnClick()
+})
+
+backgroundPop.addEventListener('click', function (){
+    showShoppingCart()
 })
 
 renderFilteredProducts(products);
@@ -190,10 +195,10 @@ function plusBtnClick(product) {
     totalWrapper.classList.add('total__wrapper')
     totalText.classList.add('total__text')
     shoppingCartPopOrderBtn.style.opacity = 1;
+    shoppingCartPopOrderBtn.classList.add('shoppingCartPop__orderBtnHover')
     itemsInShoppingCart = true;
 }
 
-const backgroundPop = document.getElementById('backgroundPop')
 
 //toggles the shoppingCart
 function showShoppingCart() {
@@ -237,6 +242,8 @@ function shoppingCartPopOrderBtnClick() {
         shoppingCartPopOrderBtn.style.opacity = 0.4;
         shoppingCart.innerHTML = 'Warenkorb (0)'
         shoppingCartItems = [];
+        shoppingCartPopOrderBtn.classList.remove('shoppingCartPop__orderBtnHover')
+        shoppingNumber = 0;
     }
 
 }
