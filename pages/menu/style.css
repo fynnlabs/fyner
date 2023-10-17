@@ -16,7 +16,7 @@ body {
   margin: 0; }
 
 .content__wrapper {
-  height: 100vh; }
+  height: 100%; }
   .content__wrapper .nav__wrapper {
     display: flex;
     justify-content: center;
@@ -92,6 +92,12 @@ body {
         padding: 8px;
         color: #c7a46c;
         box-shadow: -1px -1px 4px #c7a46c, 1px 1px 4px #77603e; }
+  .content__wrapper .products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
 
 .content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__order,
 .content__wrapper .nav__wrapper .navigation .navigation__links .link__list .link .link__about {
@@ -124,6 +130,7 @@ body {
 .left__image {
   max-width: 100%;
   max-height: 208px;
+  min-height: 208px;
   border: 2px solid #c7a46c;
   border-radius: 8px; }
 
@@ -205,7 +212,8 @@ body {
     justify-content: center;
     align-items: flex-start; }
   .headDesWrapper {
-    max-width: 50%; } }
+    min-width: 420px;
+    max-width: 420px; } }
 
 @media only screen and (min-width: 1500px) {
   .content__wrapper {
@@ -215,7 +223,7 @@ body {
       font-size: 24px;
       padding: 16px 0 0; }
     .content__wrapper .header__wrapper {
-      width: 80%;
+      width: 100%;
       padding-top: 80px; }
       .content__wrapper .header__wrapper .header {
         font-size: 56px; }

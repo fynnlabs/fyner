@@ -21,7 +21,7 @@ fetch('https://dummyjson.com/products')
         data.products.map((product)=>{
             products.push(product)
         })
-
+        console.log(products)
         //the initial render of the website with all products on it
         // has to be called here, otherwise the func might get called without any data
         renderFilteredProducts(products);
@@ -115,9 +115,9 @@ function renderFilteredProducts(filteredProducts) {
         const productPrice = document.createElement('div')
         const productDescription = document.createElement('div')
         const productImage = document.createElement('img')
-        productHeadline.textContent = product.name
+        productHeadline.textContent = product.title
         productPrice.textContent = `$${product.price}`
-        productImage.src = product.imgUrl;
+        productImage.src = product.thumbnail;
         productImage.loading = "lazy";
         productImage.alt = product.alt;
         productDescription.textContent = product.description
