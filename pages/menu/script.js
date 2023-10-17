@@ -7,8 +7,27 @@ const dinnerBtn = document.getElementById('dinnerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 
+let products = [];
+
+fetch('https://dummyjson.com/products')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        //console.log('data',data.products); // Use the data as needed
+        data.products.map((product)=>{
+            products.push(product)
+        })
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
 //the info for the products that should get rendered on the Website
-const products = [
+const products1 = [
     {
         id: 1,
         name: 'Buttermilk Pancake',
@@ -68,7 +87,8 @@ hamburgerMenu.addEventListener('click', function () {
 
 
 //the initial render of the website with all products on it
-renderFilteredProducts(products);
+    renderFilteredProducts(products);
+
 
 //if Btn clicked the website is rendered with the specific category
 function handleBtnClick(category) {
