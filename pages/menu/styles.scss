@@ -104,8 +104,10 @@ body {
     .main__btn{
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-evenly;
       padding: 8px 16px;
+      gap: 16px;
 
       .all__btn{
         display: flex;
