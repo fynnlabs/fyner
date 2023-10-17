@@ -85,6 +85,7 @@ shakesBtn.addEventListener("click", function () {
 dinnerBtn.addEventListener("click", function () {
     handleBtnClick("dinner")
 });
+
 hamburgerMenu.addEventListener('click', function () {
     toggleNavigation()
 })
