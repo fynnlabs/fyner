@@ -7,31 +7,10 @@ const dinnerBtn = document.getElementById('dinnerBtn');
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 
-let products = [];
 
-fetch('https://dummyjson.com/products')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        //console.log('data',data.products); // Use the data as needed
-        data.products.map((product)=>{
-            products.push(product)
-        })
-        console.log(products)
-        //the initial render of the website with all products on it
-        // has to be called here, otherwise the func might get called without any data
-        renderFilteredProducts(products);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
 
 //the info for the products that should get rendered on the Website
-const products1 = [
+const products = [
     {
         id: 1,
         name: 'Buttermilk Pancake',
@@ -90,7 +69,7 @@ hamburgerMenu.addEventListener('click', function () {
     toggleNavigation()
 })
 
-
+renderFilteredProducts(products);
 
 //if Btn clicked the website is rendered with the specific category
 function handleBtnClick(category) {
@@ -116,9 +95,9 @@ function renderFilteredProducts(filteredProducts) {
         const productPrice = document.createElement('div')
         const productDescription = document.createElement('div')
         const productImage = document.createElement('img')
-        productHeadline.textContent = product.title
+        productHeadline.textContent = product.name
         productPrice.textContent = `$${product.price}`
-        productImage.src = product.thumbnail;
+        productImage.src = product.imgUrl;
         productImage.loading = "lazy";
         productImage.alt = product.alt;
         productDescription.textContent = product.description
