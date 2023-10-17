@@ -21,6 +21,10 @@ fetch('https://dummyjson.com/products')
         data.products.map((product)=>{
             products.push(product)
         })
+
+        //the initial render of the website with all products on it
+        // has to be called here, otherwise the func might get called without any data
+        renderFilteredProducts(products);
     })
     .catch(error => {
         console.error('Error:', error);
@@ -85,9 +89,6 @@ hamburgerMenu.addEventListener('click', function () {
     toggleNavigation()
 })
 
-
-//the initial render of the website with all products on it
-    renderFilteredProducts(products);
 
 
 //if Btn clicked the website is rendered with the specific category
