@@ -10,7 +10,7 @@ const linkList = document.getElementById('linkList')
 
 
 //the info for the products that should get rendered on the Website
-const products = [
+const products1 = [
     {
         id: 1,
         name: 'Buttermilk Pancake',
