@@ -1,8 +1,5 @@
-const allBtn = document.getElementById('allBtn');
-const breakfastBtn = document.getElementById('breakfastBtn');
-const lunchBtn = document.getElementById('lunchBtn');
-const shakesBtn = document.getElementById('shakesBtn');
-const dinnerBtn = document.getElementById('dinnerBtn');
+const mainBtn = document.getElementById('mainBtn')
+const filterBtns = ["All", "Smartphones", "Laptops", "Fragrances", "Skincare", "Groceries", "Home-Decoration"]
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 const shoppingCart = document.getElementById('shoppingCart')
@@ -18,61 +15,10 @@ let shoppingCartItems = []
 let count = true;
 let itemsInShoppingCart = false
 let cartItem = []
+let products = []
 
-const products = [
-    {
-        id: 1,
-        name: 'Buttermilk Pancake',
-        price: 15.99,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        category: 'breakfast',
-        imgUrl: '/assets/images/pancakes.png',
-        alt: 'pancakes with a chocolate glaze and some fruits on top and around it',
-    },
-    {
-        id: 2,
-        name: 'Diner Double',
-        price: 13.99,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        category: 'lunch',
-        imgUrl: '/assets/images/burger.png',
-        alt: 'a burger with a meat patty some salad and a portion of fries in front of it',
-    },
-    {
-        id: 3,
-        name: 'Godzilla Milkshake',
-        price: 6.99,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        category: 'shakes',
-        imgUrl: '/assets/images/shake.png',
-        alt: 'a light red milkshake in a glass with a strawberry in front of it and some slice up on the glass in the glass is a glass straw',
-    },
-    {
-        id: 4,
-        name: 'Country Delight',
-        price: 20.99,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-        category: 'dinner',
-        imgUrl: '/assets/images/dinner.png',
-        alt: 'a plate tacos with meat filling and a lime and green dip next to it also some different sides and dips next to the plate and a bottle with a yellow drink',
-    }
-];
 
-allBtn.addEventListener("click", function () {
-    handleBtnClick("all")
-});
-breakfastBtn.addEventListener("click", function () {
-    handleBtnClick("breakfast")
-});
-lunchBtn.addEventListener("click", function () {
-    handleBtnClick("lunch")
-});
-shakesBtn.addEventListener("click", function () {
-    handleBtnClick("shakes")
-});
-dinnerBtn.addEventListener("click", function () {
-    handleBtnClick("dinner")
-});
+
 
 hamburgerMenu.addEventListener('click', function () {
     toggleNavigation()
@@ -90,7 +36,29 @@ backgroundPop.addEventListener('click', function (){
     showShoppingCart()
 })
 
-renderFilteredProducts(products);
+createBtn();
+
+fetch('https://dummyjson.com/products')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        //console.log('data',data.products); // Use the data as needed
+        data.products.map((product)=>{
+            products.push(product)
+        })
+        console.log(products)
+        //the initial render of the website with all products on it
+        // has to be called here, otherwise the func might get called without any data
+        renderFilteredProducts(products);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
 
 function handleBtnClick(category) {
     let filteredProducts
@@ -118,10 +86,10 @@ function renderFilteredProducts(filteredProducts) {
         const pricePlusWrapper = document.createElement('div');
         const plus = document.createElement('div');
         const textWrapper = document.createElement('div')
-        productHeadline.textContent = product.name;
+        productHeadline.textContent = product.title;
         productPrice.textContent = `$${product.price}`;
         plus.textContent = `+`;
-        productImage.src = product.imgUrl;
+        productImage.src = product.thumbnail;
         productImage.loading = "lazy";
         productImage.alt = product.alt;
         productDescription.textContent = product.description;
@@ -245,5 +213,21 @@ function shoppingCartPopOrderBtnClick() {
         shoppingCartPopOrderBtn.classList.remove('shoppingCartPop__orderBtnHover')
         shoppingNumber = 0;
     }
+}
 
+function createBtn(){
+    filterBtns.forEach(category =>{
+        const button = document.createElement('div')
+        button.classList.add("all__btn")
+        button.textContent = category
+        mainBtn.appendChild(button)
+
+        createdButtonClick(category.toLocaleLowerCase(), button)
+    })
+}
+
+function createdButtonClick(category, buttonElement){
+    buttonElement.addEventListener("click", function (){
+        handleBtnClick(category);
+    })
 }

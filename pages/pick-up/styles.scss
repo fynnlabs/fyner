@@ -34,6 +34,8 @@
     background-color: $primaryBlue;
     z-index: 1;
     left: 0;
+    flex-wrap: wrap;
+    gap: 16px;
 
     .all__btn {
       display: flex;
@@ -55,7 +57,7 @@
   }
 
   .products__wrapper {
-    padding: 144px 16px 50px;
+    padding: 170px 16px 50px;
     margin: 0 auto;
   }
 

@@ -19,7 +19,9 @@
   width: 100%;
   background-color: #040516;
   z-index: 1;
-  left: 0; }
+  left: 0;
+  flex-wrap: wrap;
+  gap: 16px; }
   .content__wrapper .main__btn .all__btn {
     display: flex;
     justify-content: center;
@@ -36,7 +38,7 @@
       cursor: pointer; }
 
 .content__wrapper .products__wrapper {
-  padding: 144px 16px 50px;
+  padding: 170px 16px 50px;
   margin: 0 auto; }
 
 .content__wrapper .shoppingCart {
