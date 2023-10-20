@@ -1,14 +1,14 @@
-const linkList = document.getElementById('linkList')
-const hamburgerMenu = document.getElementById('hamburgerMenu')
+import
+{
+    hamburgerMenu,
+    toggleNavigation
+} from "../../utils/utils.js";
+
 const navigation= document.getElementById('navigation')
 
 hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
 window.addEventListener('scroll', function(){addBackground()})
 
-//toggles the hamburger menu
-function toggleNavigation() {
-    linkList.classList.toggle('show')
-}
 
 //adds a background to the navbar if not at the top of the page
 function addBackground(){

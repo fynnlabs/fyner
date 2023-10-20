@@ -1,5 +1,5 @@
-const mainBtn = document.getElementById('mainBtn')
-const filterBtns = ["All", "Smartphones", "Laptops", "Fragrances", "Skincare", "Groceries", "Home-Decoration"]
+import {filterBtns, mainBtn, products} from "../../utils/utils.js";
+
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 const shoppingCart = document.getElementById('shoppingCart')
@@ -15,8 +15,7 @@ let shoppingCartItems = []
 let count = true;
 let itemsInShoppingCart = false
 let cartItem = []
-let products = []
-
+let showCart = true
 
 
 
@@ -116,12 +115,19 @@ function renderFilteredProducts(filteredProducts) {
         });
     });
     shoppingCartPopContent.textContent = 'Noch keine Einträge im Warenkorb'
-
 }
 
 //toggles the hamburger menu
 function toggleNavigation() {
+
     linkList.classList.toggle('show');
+    if (showCart){
+        shoppingCart.style.visibility ="hidden"
+        showCart = false;
+    } else{
+        shoppingCart.style.visibility ="visible"
+        showCart = true;
+    }
 }
 
 //adds the item to the shoppingCart
@@ -148,7 +154,7 @@ function plusBtnClick(product) {
         const shoppingCartItemName = document.createElement('div');
         const shoppingCartItemPrice = document.createElement('div')
         let itemPrice = item.price * item.quantity
-        shoppingCartItemName.textContent = `${item.name} (${item.quantity})`;
+        shoppingCartItemName.textContent = `${item.title} (${item.quantity})`;
         shoppingCartItemPrice.textContent = `${itemPrice.toFixed(2)}`
         shoppingCartItemName.classList.add('shoppingCartItem__name')
         shoppingCartItemWrapper.classList.add('shoppingCartItem__wrapper')

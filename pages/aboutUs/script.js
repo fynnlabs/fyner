@@ -1,11 +1,8 @@
-
-const hamburgerMenu = document.getElementById('hamburgerMenu')
-const linkList = document.getElementById('linkList')
+import
+{
+    hamburgerMenu,
+    toggleNavigation
+} from "../../utils/utils.js";
 
 hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
-
-//toggles the hamburger menu
-function toggleNavigation() {
-    linkList.classList.toggle('show')
-}
 

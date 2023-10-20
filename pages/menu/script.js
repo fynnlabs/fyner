@@ -1,10 +1,11 @@
-//variables
-const mainBtn = document.getElementById('mainBtn')
-const filterBtns = ["All", "Smartphones", "Laptops", "Fragrances", "Skincare", "Groceries", "Home-Decoration"]
-const hamburgerMenu = document.getElementById('hamburgerMenu')
-const linkList = document.getElementById('linkList')
-
-let products = [];
+import
+{
+    hamburgerMenu,
+    products,
+    filterBtns,
+    mainBtn,
+    toggleNavigation
+} from "../../utils/utils.js";
 
 fetch('https://dummyjson.com/products')
     .then(response => {
@@ -80,9 +81,8 @@ function renderFilteredProducts(filteredProducts) {
 }
 
 //toggles the hamburger menu
-function toggleNavigation() {
-    linkList.classList.toggle('show')
-}
+
+
 
 function createBtn(){
     filterBtns.forEach(category =>{
