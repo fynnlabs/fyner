@@ -10,6 +10,7 @@ export function toggleNavigation() {
     linkList.classList.toggle('show')
 }
 
+//fetches data from an url and puts them into an array
 export function fetchData(url, products, renderFilteredProducts){
     fetch(url)
         .then(response => {

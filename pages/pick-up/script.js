@@ -1,5 +1,6 @@
 import {fetchData, filterBtns, mainBtn, products} from "../../utils/utils.js";
 
+//variables
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
 const shoppingCart = document.getElementById('shoppingCart')
@@ -20,15 +21,13 @@ let showCart = true
 
 
 hamburgerMenu.addEventListener('click', toggleNavigation)
-
 shoppingCart.addEventListener('click', showShoppingCart)
-
 shoppingCartPopOrderBtn.addEventListener('click', shoppingCartPopOrderBtnClick)
-
 backgroundPop.addEventListener('click', showShoppingCart)
 
+//calls createBtn
 createBtn();
-
+//calls fetchData and you can add the url from where you want the data
 fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
 
 function handleBtnClick(category) {
@@ -48,6 +47,7 @@ function renderFilteredProducts(filteredProducts) {
     const productListDiv = document.getElementById('products');
     productListDiv.innerHTML = ''; // Clear the existing content
     filteredProducts.forEach((product) => {
+        //creates divs for each piece of content that are needed
         const productWrapper = document.createElement('div');
         const productHeadDesWrapper = document.createElement('div');
         const productHeadline = document.createElement('div');
@@ -57,6 +57,7 @@ function renderFilteredProducts(filteredProducts) {
         const pricePlusWrapper = document.createElement('div');
         const plus = document.createElement('div');
         const textWrapper = document.createElement('div')
+        //adds the content that should get loaded
         productHeadline.textContent = product.title;
         productPrice.textContent = `$${product.price}`;
         plus.textContent = `+`;
@@ -64,6 +65,7 @@ function renderFilteredProducts(filteredProducts) {
         productImage.loading = "lazy";
         productImage.alt = product.alt;
         productDescription.textContent = product.description;
+        //makes the hierarchy for the divs
         productListDiv.appendChild(productWrapper);
         productWrapper.appendChild(textWrapper)
         textWrapper.appendChild(productHeadline);
@@ -72,6 +74,7 @@ function renderFilteredProducts(filteredProducts) {
         productWrapper.appendChild(pricePlusWrapper);
         pricePlusWrapper.appendChild(productPrice);
         pricePlusWrapper.appendChild(plus);
+        //adds the classes for the styling
         plus.classList.add("plus");
         pricePlusWrapper.classList.add("pricePlusWrapper")
         productPrice.classList.add("price");
@@ -82,6 +85,7 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.classList.add("headDesWrapper");
         textWrapper.classList.add("textWrapper")
 
+        //makes that the plusBtn functions for each created element
         plus.addEventListener('click', function () {
             plusBtnClick(product);
         });
@@ -112,6 +116,7 @@ function plusBtnClick(product) {
         shoppingCartItems.push(clonedProduct)
     }
 
+    //calls updateTotalPrice
     updateTotalPrice();
 
     //renders each product from shoppingCartItems in the shopping cart
@@ -187,6 +192,7 @@ function shoppingCartPopOrderBtnClick() {
     }
 }
 
+//creates Btns for each String that is in filterBtns
 function createBtn(){
     filterBtns.forEach(category =>{
         const button = document.createElement('div')
@@ -198,6 +204,7 @@ function createBtn(){
     })
 }
 
+//makes it that every Btn from createBtn is able to filter for their category
 function createdButtonClick(category, buttonElement){
     buttonElement.addEventListener("click", function (){
         handleBtnClick(category);
