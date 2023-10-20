@@ -4,5 +4,5 @@ import
     toggleNavigation
 } from "../../utils/utils.js";
 
-hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
+hamburgerMenu.addEventListener('click', toggleNavigation)
 

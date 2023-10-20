@@ -4,35 +4,16 @@ import
     products,
     filterBtns,
     mainBtn,
-    toggleNavigation
+    toggleNavigation,
+    fetchData
 } from "../../utils/utils.js";
 
-fetch('https://dummyjson.com/products')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        //console.log('data',data.products); // Use the data as needed
-        data.products.map((product)=>{
-            products.push(product)
-        })
-        console.log(products)
-        //the initial render of the website with all products on it
-        // has to be called here, otherwise the func might get called without any data
-        renderFilteredProducts(products);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
 
+//call createBtn
 createBtn();
 
-hamburgerMenu.addEventListener('click', function () {
-    toggleNavigation()
-})
+hamburgerMenu.addEventListener('click', toggleNavigation)
 
 
 //if Btn clicked the website is rendered with the specific category
@@ -79,10 +60,6 @@ function renderFilteredProducts(filteredProducts) {
         productHeadDesWrapper.classList.add("headDesWrapper")
     });
 }
-
-//toggles the hamburger menu
-
-
 
 function createBtn(){
     filterBtns.forEach(category =>{

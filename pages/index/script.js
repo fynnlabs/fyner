@@ -6,8 +6,8 @@ import
 
 const navigation= document.getElementById('navigation')
 
-hamburgerMenu.addEventListener('click', function () {toggleNavigation()})
-window.addEventListener('scroll', function(){addBackground()})
+hamburgerMenu.addEventListener('click', toggleNavigation)
+window.addEventListener('scroll',addBackground)
 
 
 //adds a background to the navbar if not at the top of the page

@@ -5,6 +5,29 @@ export const mainBtn = document.getElementById('mainBtn');
 export const hamburgerMenu = document.getElementById('hamburgerMenu')
 export let products = [];
 
+//toggles the hamburger navigation menu
 export function toggleNavigation() {
     linkList.classList.toggle('show')
+}
+
+export function fetchData(url, products, renderFilteredProducts){
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            //console.log('data',data.products); // Use the data as needed
+            data.products.map((product)=>{
+                products.push(product)
+            })
+            //the initial render of the website with all products on it
+            // has to be called here, otherwise the func might get called without any data
+            renderFilteredProducts(products);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }

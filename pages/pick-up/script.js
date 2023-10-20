@@ -1,4 +1,4 @@
-import {filterBtns, mainBtn, products} from "../../utils/utils.js";
+import {fetchData, filterBtns, mainBtn, products} from "../../utils/utils.js";
 
 const hamburgerMenu = document.getElementById('hamburgerMenu')
 const linkList = document.getElementById('linkList')
@@ -19,45 +19,17 @@ let showCart = true
 
 
 
-hamburgerMenu.addEventListener('click', function () {
-    toggleNavigation()
-})
+hamburgerMenu.addEventListener('click', toggleNavigation)
 
-shoppingCart.addEventListener('click', function () {
-    showShoppingCart()
-})
+shoppingCart.addEventListener('click', showShoppingCart)
 
-shoppingCartPopOrderBtn.addEventListener('click', function () {
-    shoppingCartPopOrderBtnClick()
-})
+shoppingCartPopOrderBtn.addEventListener('click', shoppingCartPopOrderBtnClick)
 
-backgroundPop.addEventListener('click', function (){
-    showShoppingCart()
-})
+backgroundPop.addEventListener('click', showShoppingCart)
 
 createBtn();
 
-fetch('https://dummyjson.com/products')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        //console.log('data',data.products); // Use the data as needed
-        data.products.map((product)=>{
-            products.push(product)
-        })
-        console.log(products)
-        //the initial render of the website with all products on it
-        // has to be called here, otherwise the func might get called without any data
-        renderFilteredProducts(products);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-
+fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
 
 function handleBtnClick(category) {
     let filteredProducts
@@ -119,15 +91,9 @@ function renderFilteredProducts(filteredProducts) {
 
 //toggles the hamburger menu
 function toggleNavigation() {
-
     linkList.classList.toggle('show');
-    if (showCart){
-        shoppingCart.style.visibility ="hidden"
-        showCart = false;
-    } else{
-        shoppingCart.style.visibility ="visible"
-        showCart = true;
-    }
+    shoppingCart.style.visibility = showCart ? 'hidden' : 'visible';
+    showCart = !showCart;
 }
 
 //adds the item to the shoppingCart
