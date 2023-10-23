@@ -8,15 +8,14 @@ import
     fetchData
 } from "../../utils/utils.js";
 
-fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
-
 //call createBtn
 createBtn();
+//calls fetchData
+fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
 
 hamburgerMenu.addEventListener('click', toggleNavigation)
 
-
-//if Btn clicked the website is rendered with the specific category
+//if Btn clicked the website is rendered with the specific category products
 function handleBtnClick(category) {
     let filteredProducts
     /*filterProducts(category)*/

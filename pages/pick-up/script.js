@@ -13,12 +13,10 @@ const totalText = document.createElement('span')
 const totalPrice = document.createElement('span')
 let shoppingNumber = 0
 let shoppingCartItems = []
-let count = true;
+let placeholderNeeded = true;
 let itemsInShoppingCart = false
 let cartItem = []
 let showCart = true
-
-
 
 hamburgerMenu.addEventListener('click', toggleNavigation)
 shoppingCart.addEventListener('click', showShoppingCart)
@@ -27,9 +25,10 @@ backgroundPop.addEventListener('click', showShoppingCart)
 
 //calls createBtn
 createBtn();
-//calls fetchData and you can add the url from where you want the data
+//calls fetchData
 fetchData('https://dummyjson.com/products', products, renderFilteredProducts);
 
+//if Btn clicked the website is rendered with the specific category products
 function handleBtnClick(category) {
     let filteredProducts
     /*filterProducts(category)*/
@@ -148,11 +147,11 @@ function plusBtnClick(product) {
 //toggles the shoppingCart
 function showShoppingCart() {
     updateTotalPrice();
-    if (shoppingNumber === 0 && count === true) {
+    if (shoppingNumber === 0 && placeholderNeeded === true) {
         const shoppingCartPlaceholder = document.createElement('div')
         shoppingCartPlaceholder.classList.add('shoppingCart__placeholder')
         shoppingCartPopContent.appendChild(shoppingCartPlaceholder)
-        count = false;
+        placeholderNeeded = false;
     }
     if(shoppingCartPop.style.visibility === "visible"){
         shoppingCartPop.style.visibility = "hidden"

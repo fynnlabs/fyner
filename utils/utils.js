@@ -20,7 +20,6 @@ export function fetchData(url, products, renderFilteredProducts){
             return response.json();
         })
         .then(data => {
-            //console.log('data',data.products); // Use the data as needed
             data.products.map((product)=>{
                 products.push(product)
             })
